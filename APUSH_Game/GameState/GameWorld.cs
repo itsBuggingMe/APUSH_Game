@@ -4,31 +4,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using APUSH_Game.Helpers;
 
 namespace APUSH_Game.GameState
 {
     internal class GameWorld
     {
         private EntityManager _em;
-        private County[] _counties;
+        private Region[] _regions;
 
         public GameWorld()
         {
-            _counties = JsonConvert.DeserializeObject<County[]>(File.ReadAllText("us-county-clean.json"));
-            Array.Sort(_counties, (a, b) => a.LocationX.CompareTo(b.LocationX));
             _em = new(this);
-
-            _em.AddEntity(new CountyUpdate(_counties), new CountyDraw());
+            _regions = JsonConvert.DeserializeObject<Region[]>(File.ReadAllText("terr.json"));
+            for(int i = 0; i < _regions.Length; i++)
+            {
+                _em.AddEntity(new RegionData(_regions[i]), new RegionDrawer());
+            }
         }
 
         public void Tick(GameTime Gametime)
-        {
+        {   
             _em.Update(Gametime);
         }
 
         public void Draw(GameTime Gametime)
         {
+            Globals.SpriteBatch.Begin();
             _em.Draw(Gametime);
+            Globals.SpriteBatch.End();
         }
     }
 }

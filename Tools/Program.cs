@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Numerics;
-using System.Runtime.InteropServices;
+﻿using Region = APUSH_Game.GameState.Region;
+using Microsoft.Xna.Framework;
+using APUSH_Game.GameState;
+using Newtonsoft.Json;
 
 namespace Tools
 {
@@ -10,187 +9,26 @@ namespace Tools
     {
         static void Main(string[] args)
         {
-            Bitmap bmp = new Bitmap(@"C:\Users\Jason\Downloads\New map ig.png");
+            string raw = "0|0|1862|371|1493|1171|0|0|1493|1171\r\n1|0|1379|1683|1286|794|1188|1171|1286|794\r\n2|0|1185|1058|1270|782|1493|0|1270|782\r\n3|0|1078|211|1188|1030|0|1171|1188|1030\r\n4|1|852|960|733|1254|1188|1965|733|1254\r\n5|0|2284|1505|1145|388|1493|782|1145|388\r\n6|0|916|484|735|624|1921|1965|735|624\r\n7|1|3213|459|593|675|0|2201|593|675\r\n8|0|2781|484|484|766|1921|2589|484|766\r\n9|2|2615|2134|503|626|593|2201|503|626\r\n10|2|3000|2252|548|511|2656|1965|548|511\r\n11|1|3335|1472|599|523|2405|2589|599|523\r\n12|2|2799|2573|618|614|2474|1171|618|614\r\n13|0|2928|1892|521|395|0|2876|521|395\r\n14|1|3255|1132|552|358|521|2876|552|358\r\n15|1|3560|713|479|522|2763|0|479|522\r\n16|1|3703|1228|357|640|2763|522|357|640\r\n17|2|3438|1945|451|410|3004|2589|451|410\r\n18|1|4094|821|353|479|3092|1171|353|479\r\n19|1|4269|1211|379|431|2405|3112|379|431\r\n20|1|4026|1290|274|482|521|3234|274|482\r\n21|2|4652|2680|322|469|3120|522|322|469\r\n22|1|5318|377|339|526|3004|2999|339|526\r\n23|2|3843|2101|216|563|795|3234|216|563\r\n24|2|3499|2356|292|393|0|3271|292|393\r\n25|2|4347|2268|414|295|3242|209|414|295\r\n26|2|2268|2426|374|374|3204|1965|374|374\r\n27|1|4928|745|282|378|3343|3318|282|378\r\n28|2|4025|1846|592|209|3242|0|592|209\r\n29|2|4709|1881|442|227|2405|3543|442|227\r\n30|2|4042|2283|218|361|2784|3112|218|361\r\n31|2|2644|1935|285|234|3445|1445|285|234\r\n32|2|4044|2082|293|212|3445|1679|293|212\r\n33|2|4460|1703|680|159|1188|3484|680|159\r\n34|1|4147|1590|425|204|1921|3596|425|204\r\n35|2|4411|2514|405|213|3442|891|405|213\r\n36|2|4686|2024|274|274|3445|1171|274|274\r\n37|1|4628|1143|342|319|3343|2999|342|319\r\n38|1|3757|649|521|265|1188|3219|521|265\r\n39|1|4688|965|335|224|3204|2339|335|224\r\n40|2|4404|1817|436|241|1921|3355|436|241\r\n41|1|4512|1367|256|369|3442|522|256|369\r\n42|2|4575|1580|396|169|2474|1785|396|169\r\n43|2|4409|2092|338|260|3092|1650|338|260\r\n44|2|4791|1759|394|137|3455|2749|394|137\r\n45|1|4147|1757|412|133|1188|3643|412|133\r\n46|2|3739|2576|196|214|3578|2117|196|214\r\n47|1|4863|1125|264|176|3120|991|264|176\r\n48|2|4223|2297|163|243|3625|3318|163|243\r\n49|1|5148|708|149|284|292|3513|149|284\r\n50|2|4285|2051|227|242|292|3271|227|242\r\n51|1|5267|669|156|308|1011|3234|156|308\r\n52|1|3931|1746|224|181|3578|2331|224|181\r\n53|2|3856|1928|178|181|3685|2999|178|181\r\n54|2|4066|1986|370|107|2656|2476|370|107\r\n55|2|4136|2533|282|152|3578|1965|282|152\r\n56|2|3737|2320|156|258|1011|3542|156|258\r\n57|2|4501|2006|230|168|3625|3561|230|168\r\n58|1|5216|934|269|160|3004|3525|269|160\r\n59|1|4713|1271|176|184|3656|209|176|184\r\n60|2|4373|2214|347|160|3455|2589|347|160\r\n61|2|4890|1566|210|166|2870|1785|210|166\r\n62|2|3768|2114|127|204|2847|3543|127|204\r\n63|2|4622|2115|194|235|1709|3219|194|235\r\n64|0|2659|1876|276|67|3442|1104|276|67\r\n65|1|4985|1282|172|123|3656|393|172|123\r\n66|1|4858|1267|135|148|0|3664|135|148\r\n67|1|5219|1051|151|147|1768|3643|151|147\r\n68|1|5065|1080|168|149|1600|3643|168|149\r\n69|1|5108|1185|111|134|1073|2876|111|134\r\n70|2|4725|1515|252|95|3455|2886|252|95\r\n71|1|5104|1324|118|137|2638|964|118|137\r\n72|1|4939|1393|141|107|135|3664|141|107\r\n73|2|4776|1468|186|89|3004|3685|186|89\r\n74|1|5053|1412|121|182|2638|782|121|182\r\n75|1|5084|1373|90|153|1096|2201|90|153\r\n76|2|3903|2676|78|104|1096|2354|78|104\r\n77|1|5210|1157|165|98|3026|2476|165|98\r\n78|1|4981|1500|90|88|1096|2458|90|88\r\n79|2|4821|1436|121|49|593|2827|121|49\r\n80|2|4722|2339|56|65|1096|2546|56|65\r\n81|1|4764|1435|103|68|2638|1101|103|68\r\n82|1|5361|1043|42|80|1096|2611|42|80\r\n83|2|4003|2059|58|37|1129|2736|58|37\r\n84|2|4948|1495|43|67|1138|2611|43|67\r\n85|1|5121|1581|33|99|1096|2691|33|99\r\n86|1|4886|1423|55|45|1129|2691|55|45\r\n87|2|4240|2399|32|35|714|2827|32|35\r\n88|2|4971|1672|32|38|1135|2790|32|38\r\n89|2|4390|2189|36|34|1152|2546|36|34\r\n90|2|3778|2410|39|39|1096|2790|39|39\r\n91|1|4883|1407|44|18|746|2827|44|18\r\n92|1|4982|1497|20|19|2741|1101|20|19\r\n93|1|5103|1351|24|18|1152|2580|24|18\r\n94|2|4198|2281|27|13|1152|2598|27|13\r\n95|1|4890|1400|14|9|1174|2354|14|9";
 
-            Vector3[] pallate = new Color[] { Color.Black, Color.White }.Select(cToVec).ToArray();
-            Color[] pallateColor = new Color[] { Color.Black, Color.White };
-            float[] distances = new float[pallate.Length];
+            List<Region> regions = new List<Region>();
 
-            static Vector3 cToVec(Color color)
+            foreach(var ss in raw.Split(Environment.NewLine))
             {
-                return new Vector3(color.R, color.G, color.B);
-            }
+                var parts = ss.Split('|');
 
-            for (int i = 0; i < bmp.Width; i++)
-            {
-                for (int j = 0; j < bmp.Height; j++)
+                regions.Add(new Region()
                 {
-                    Color c = bmp.GetPixel(i, j);
-                    for (int ci = 0; ci < pallate.Length; ci++)
-                        distances[ci] = Vector3.DistanceSquared(pallate[ci], cToVec(c));
-
-                    bmp.SetPixel(i, j, pallateColor[Array.IndexOf(distances, distances.Min())]);
-                }
+                    MapBounds = new Rectangle(int.Parse(parts[2]), int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5])),
+                    TextureSource = new Rectangle(int.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8]), int.Parse(parts[9])),
+                    TerritoryType = (TerrioryType)(int.Parse(parts[1])),
+                    RegionName = "Fill This in",
+                    BitField = string.Empty,
+                    ID = int.Parse(parts[0])
+                });
             }
 
-            bmp.Save(@"C:\Users\Jason\Downloads\New map ig clean bg.png");
-        }
-    }
-
-    public class LockBitmap
-    {
-        Bitmap source = null;
-        IntPtr Iptr = IntPtr.Zero;
-        BitmapData bitmapData = null;
-
-        public byte[] Pixels { get; set; }
-        public int Depth { get; private set; }
-        public int Width { get; private set; }
-        public int Height { get; private set; }
-
-        public LockBitmap(Bitmap source)
-        {
-            this.source = source;
-        }
-
-        /// <summary>
-        /// Lock bitmap data
-        /// </summary>
-        public void LockBits()
-        {
-            try
-            {
-                // Get width and height of bitmap
-                Width = source.Width;
-                Height = source.Height;
-
-                // get total locked pixels count
-                int PixelCount = Width * Height;
-
-                // Create rectangle to lock
-                Rectangle rect = new Rectangle(0, 0, Width, Height);
-
-                // get source bitmap pixel format size
-                Depth = System.Drawing.Bitmap.GetPixelFormatSize(source.PixelFormat);
-
-                // Check if bpp (Bits Per Pixel) is 8, 24, or 32
-                if (Depth != 8 && Depth != 24 && Depth != 32)
-                {
-                    throw new ArgumentException("Only 8, 24 and 32 bpp images are supported.");
-                }
-
-                // Lock bitmap and return bitmap data
-                bitmapData = source.LockBits(rect, ImageLockMode.ReadWrite,
-                                             source.PixelFormat);
-
-                // create byte array to copy pixel values
-                int step = Depth / 8;
-                Pixels = new byte[PixelCount * step];
-                Iptr = bitmapData.Scan0;
-
-                // Copy data from pointer to array
-                Marshal.Copy(Iptr, Pixels, 0, Pixels.Length);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Unlock bitmap data
-        /// </summary>
-        public void UnlockBits()
-        {
-            try
-            {
-                // Copy data from byte array to pointer
-                Marshal.Copy(Pixels, 0, Iptr, Pixels.Length);
-
-                // Unlock bitmap data
-                source.UnlockBits(bitmapData);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Get the color of the specified pixel
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
-        public Color GetPixel(int x, int y)
-        {
-            Color clr = Color.Empty;
-
-            // Get color components count
-            int cCount = Depth / 8;
-
-            // Get start index of the specified pixel
-            int i = ((y * Width) + x) * cCount;
-
-            if (i > Pixels.Length - cCount)
-                throw new IndexOutOfRangeException();
-
-            if (Depth == 32) // For 32 bpp get Red, Green, Blue and Alpha
-            {
-                byte b = Pixels[i];
-                byte g = Pixels[i + 1];
-                byte r = Pixels[i + 2];
-                byte a = Pixels[i + 3]; // a
-                clr = Color.FromArgb(a, r, g, b);
-            }
-            if (Depth == 24) // For 24 bpp get Red, Green and Blue
-            {
-                byte b = Pixels[i];
-                byte g = Pixels[i + 1];
-                byte r = Pixels[i + 2];
-                clr = Color.FromArgb(r, g, b);
-            }
-            if (Depth == 8)
-            // For 8 bpp get color value (Red, Green and Blue values are the same)
-            {
-                byte c = Pixels[i];
-                clr = Color.FromArgb(c, c, c);
-            }
-            return clr;
-        }
-
-        /// <summary>
-        /// Set the color of the specified pixel
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="color"></param>
-        public void SetPixel(int x, int y, Color color)
-        {
-            // Get color components count
-            int cCount = Depth / 8;
-
-            // Get start index of the specified pixel
-            int i = ((y * Width) + x) * cCount;
-
-            if (Depth == 32) // For 32 bpp set Red, Green, Blue and Alpha
-            {
-                Pixels[i] = color.B;
-                Pixels[i + 1] = color.G;
-                Pixels[i + 2] = color.R;
-                Pixels[i + 3] = color.A;
-            }
-            if (Depth == 24) // For 24 bpp set Red, Green and Blue
-            {
-                Pixels[i] = color.B;
-                Pixels[i + 1] = color.G;
-                Pixels[i + 2] = color.R;
-            }
-            if (Depth == 8)
-            // For 8 bpp set color value (Red, Green and Blue values are the same)
-            {
-                Pixels[i] = color.B;
-            }
+            File.WriteAllText("terr.json", JsonConvert.SerializeObject(regions.ToArray()));
         }
     }
 }

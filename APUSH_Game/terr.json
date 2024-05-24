@@ -1,0 +1,1730 @@
+[
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 0,
+      "Width": 1493,
+      "Height": 1171
+    },
+    "MapBounds": {
+      "X": 1862,
+      "Y": 371,
+      "Width": 1493,
+      "Height": 1171
+    },
+    "TerritoryType": 0,
+    "ID": 0,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1188,
+      "Y": 1171,
+      "Width": 1286,
+      "Height": 794
+    },
+    "MapBounds": {
+      "X": 1379,
+      "Y": 1683,
+      "Width": 1286,
+      "Height": 794
+    },
+    "TerritoryType": 0,
+    "ID": 1,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1493,
+      "Y": 0,
+      "Width": 1270,
+      "Height": 782
+    },
+    "MapBounds": {
+      "X": 1185,
+      "Y": 1058,
+      "Width": 1270,
+      "Height": 782
+    },
+    "TerritoryType": 0,
+    "ID": 2,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 1171,
+      "Width": 1188,
+      "Height": 1030
+    },
+    "MapBounds": {
+      "X": 1078,
+      "Y": 211,
+      "Width": 1188,
+      "Height": 1030
+    },
+    "TerritoryType": 0,
+    "ID": 3,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1188,
+      "Y": 1965,
+      "Width": 733,
+      "Height": 1254
+    },
+    "MapBounds": {
+      "X": 852,
+      "Y": 960,
+      "Width": 733,
+      "Height": 1254
+    },
+    "TerritoryType": 1,
+    "ID": 4,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1493,
+      "Y": 782,
+      "Width": 1145,
+      "Height": 388
+    },
+    "MapBounds": {
+      "X": 2284,
+      "Y": 1505,
+      "Width": 1145,
+      "Height": 388
+    },
+    "TerritoryType": 0,
+    "ID": 5,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1921,
+      "Y": 1965,
+      "Width": 735,
+      "Height": 624
+    },
+    "MapBounds": {
+      "X": 916,
+      "Y": 484,
+      "Width": 735,
+      "Height": 624
+    },
+    "TerritoryType": 0,
+    "ID": 6,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 2201,
+      "Width": 593,
+      "Height": 675
+    },
+    "MapBounds": {
+      "X": 3213,
+      "Y": 459,
+      "Width": 593,
+      "Height": 675
+    },
+    "TerritoryType": 1,
+    "ID": 7,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1921,
+      "Y": 2589,
+      "Width": 484,
+      "Height": 766
+    },
+    "MapBounds": {
+      "X": 2781,
+      "Y": 484,
+      "Width": 484,
+      "Height": 766
+    },
+    "TerritoryType": 0,
+    "ID": 8,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 593,
+      "Y": 2201,
+      "Width": 503,
+      "Height": 626
+    },
+    "MapBounds": {
+      "X": 2615,
+      "Y": 2134,
+      "Width": 503,
+      "Height": 626
+    },
+    "TerritoryType": 2,
+    "ID": 9,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2656,
+      "Y": 1965,
+      "Width": 548,
+      "Height": 511
+    },
+    "MapBounds": {
+      "X": 3000,
+      "Y": 2252,
+      "Width": 548,
+      "Height": 511
+    },
+    "TerritoryType": 2,
+    "ID": 10,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2405,
+      "Y": 2589,
+      "Width": 599,
+      "Height": 523
+    },
+    "MapBounds": {
+      "X": 3335,
+      "Y": 1472,
+      "Width": 599,
+      "Height": 523
+    },
+    "TerritoryType": 1,
+    "ID": 11,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2474,
+      "Y": 1171,
+      "Width": 618,
+      "Height": 614
+    },
+    "MapBounds": {
+      "X": 2799,
+      "Y": 2573,
+      "Width": 618,
+      "Height": 614
+    },
+    "TerritoryType": 2,
+    "ID": 12,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 2876,
+      "Width": 521,
+      "Height": 395
+    },
+    "MapBounds": {
+      "X": 2928,
+      "Y": 1892,
+      "Width": 521,
+      "Height": 395
+    },
+    "TerritoryType": 0,
+    "ID": 13,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 521,
+      "Y": 2876,
+      "Width": 552,
+      "Height": 358
+    },
+    "MapBounds": {
+      "X": 3255,
+      "Y": 1132,
+      "Width": 552,
+      "Height": 358
+    },
+    "TerritoryType": 1,
+    "ID": 14,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2763,
+      "Y": 0,
+      "Width": 479,
+      "Height": 522
+    },
+    "MapBounds": {
+      "X": 3560,
+      "Y": 713,
+      "Width": 479,
+      "Height": 522
+    },
+    "TerritoryType": 1,
+    "ID": 15,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2763,
+      "Y": 522,
+      "Width": 357,
+      "Height": 640
+    },
+    "MapBounds": {
+      "X": 3703,
+      "Y": 1228,
+      "Width": 357,
+      "Height": 640
+    },
+    "TerritoryType": 1,
+    "ID": 16,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3004,
+      "Y": 2589,
+      "Width": 451,
+      "Height": 410
+    },
+    "MapBounds": {
+      "X": 3438,
+      "Y": 1945,
+      "Width": 451,
+      "Height": 410
+    },
+    "TerritoryType": 2,
+    "ID": 17,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3092,
+      "Y": 1171,
+      "Width": 353,
+      "Height": 479
+    },
+    "MapBounds": {
+      "X": 4094,
+      "Y": 821,
+      "Width": 353,
+      "Height": 479
+    },
+    "TerritoryType": 1,
+    "ID": 18,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2405,
+      "Y": 3112,
+      "Width": 379,
+      "Height": 431
+    },
+    "MapBounds": {
+      "X": 4269,
+      "Y": 1211,
+      "Width": 379,
+      "Height": 431
+    },
+    "TerritoryType": 1,
+    "ID": 19,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 521,
+      "Y": 3234,
+      "Width": 274,
+      "Height": 482
+    },
+    "MapBounds": {
+      "X": 4026,
+      "Y": 1290,
+      "Width": 274,
+      "Height": 482
+    },
+    "TerritoryType": 1,
+    "ID": 20,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3120,
+      "Y": 522,
+      "Width": 322,
+      "Height": 469
+    },
+    "MapBounds": {
+      "X": 4652,
+      "Y": 2680,
+      "Width": 322,
+      "Height": 469
+    },
+    "TerritoryType": 2,
+    "ID": 21,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3004,
+      "Y": 2999,
+      "Width": 339,
+      "Height": 526
+    },
+    "MapBounds": {
+      "X": 5318,
+      "Y": 377,
+      "Width": 339,
+      "Height": 526
+    },
+    "TerritoryType": 1,
+    "ID": 22,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 795,
+      "Y": 3234,
+      "Width": 216,
+      "Height": 563
+    },
+    "MapBounds": {
+      "X": 3843,
+      "Y": 2101,
+      "Width": 216,
+      "Height": 563
+    },
+    "TerritoryType": 2,
+    "ID": 23,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 3271,
+      "Width": 292,
+      "Height": 393
+    },
+    "MapBounds": {
+      "X": 3499,
+      "Y": 2356,
+      "Width": 292,
+      "Height": 393
+    },
+    "TerritoryType": 2,
+    "ID": 24,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3242,
+      "Y": 209,
+      "Width": 414,
+      "Height": 295
+    },
+    "MapBounds": {
+      "X": 4347,
+      "Y": 2268,
+      "Width": 414,
+      "Height": 295
+    },
+    "TerritoryType": 2,
+    "ID": 25,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3204,
+      "Y": 1965,
+      "Width": 374,
+      "Height": 374
+    },
+    "MapBounds": {
+      "X": 2268,
+      "Y": 2426,
+      "Width": 374,
+      "Height": 374
+    },
+    "TerritoryType": 2,
+    "ID": 26,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3343,
+      "Y": 3318,
+      "Width": 282,
+      "Height": 378
+    },
+    "MapBounds": {
+      "X": 4928,
+      "Y": 745,
+      "Width": 282,
+      "Height": 378
+    },
+    "TerritoryType": 1,
+    "ID": 27,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3242,
+      "Y": 0,
+      "Width": 592,
+      "Height": 209
+    },
+    "MapBounds": {
+      "X": 4025,
+      "Y": 1846,
+      "Width": 592,
+      "Height": 209
+    },
+    "TerritoryType": 2,
+    "ID": 28,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2405,
+      "Y": 3543,
+      "Width": 442,
+      "Height": 227
+    },
+    "MapBounds": {
+      "X": 4709,
+      "Y": 1881,
+      "Width": 442,
+      "Height": 227
+    },
+    "TerritoryType": 2,
+    "ID": 29,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2784,
+      "Y": 3112,
+      "Width": 218,
+      "Height": 361
+    },
+    "MapBounds": {
+      "X": 4042,
+      "Y": 2283,
+      "Width": 218,
+      "Height": 361
+    },
+    "TerritoryType": 2,
+    "ID": 30,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3445,
+      "Y": 1445,
+      "Width": 285,
+      "Height": 234
+    },
+    "MapBounds": {
+      "X": 2644,
+      "Y": 1935,
+      "Width": 285,
+      "Height": 234
+    },
+    "TerritoryType": 2,
+    "ID": 31,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3445,
+      "Y": 1679,
+      "Width": 293,
+      "Height": 212
+    },
+    "MapBounds": {
+      "X": 4044,
+      "Y": 2082,
+      "Width": 293,
+      "Height": 212
+    },
+    "TerritoryType": 2,
+    "ID": 32,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1188,
+      "Y": 3484,
+      "Width": 680,
+      "Height": 159
+    },
+    "MapBounds": {
+      "X": 4460,
+      "Y": 1703,
+      "Width": 680,
+      "Height": 159
+    },
+    "TerritoryType": 2,
+    "ID": 33,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1921,
+      "Y": 3596,
+      "Width": 425,
+      "Height": 204
+    },
+    "MapBounds": {
+      "X": 4147,
+      "Y": 1590,
+      "Width": 425,
+      "Height": 204
+    },
+    "TerritoryType": 1,
+    "ID": 34,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3442,
+      "Y": 891,
+      "Width": 405,
+      "Height": 213
+    },
+    "MapBounds": {
+      "X": 4411,
+      "Y": 2514,
+      "Width": 405,
+      "Height": 213
+    },
+    "TerritoryType": 2,
+    "ID": 35,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3445,
+      "Y": 1171,
+      "Width": 274,
+      "Height": 274
+    },
+    "MapBounds": {
+      "X": 4686,
+      "Y": 2024,
+      "Width": 274,
+      "Height": 274
+    },
+    "TerritoryType": 2,
+    "ID": 36,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3343,
+      "Y": 2999,
+      "Width": 342,
+      "Height": 319
+    },
+    "MapBounds": {
+      "X": 4628,
+      "Y": 1143,
+      "Width": 342,
+      "Height": 319
+    },
+    "TerritoryType": 1,
+    "ID": 37,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1188,
+      "Y": 3219,
+      "Width": 521,
+      "Height": 265
+    },
+    "MapBounds": {
+      "X": 3757,
+      "Y": 649,
+      "Width": 521,
+      "Height": 265
+    },
+    "TerritoryType": 1,
+    "ID": 38,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3204,
+      "Y": 2339,
+      "Width": 335,
+      "Height": 224
+    },
+    "MapBounds": {
+      "X": 4688,
+      "Y": 965,
+      "Width": 335,
+      "Height": 224
+    },
+    "TerritoryType": 1,
+    "ID": 39,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1921,
+      "Y": 3355,
+      "Width": 436,
+      "Height": 241
+    },
+    "MapBounds": {
+      "X": 4404,
+      "Y": 1817,
+      "Width": 436,
+      "Height": 241
+    },
+    "TerritoryType": 2,
+    "ID": 40,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3442,
+      "Y": 522,
+      "Width": 256,
+      "Height": 369
+    },
+    "MapBounds": {
+      "X": 4512,
+      "Y": 1367,
+      "Width": 256,
+      "Height": 369
+    },
+    "TerritoryType": 1,
+    "ID": 41,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2474,
+      "Y": 1785,
+      "Width": 396,
+      "Height": 169
+    },
+    "MapBounds": {
+      "X": 4575,
+      "Y": 1580,
+      "Width": 396,
+      "Height": 169
+    },
+    "TerritoryType": 2,
+    "ID": 42,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3092,
+      "Y": 1650,
+      "Width": 338,
+      "Height": 260
+    },
+    "MapBounds": {
+      "X": 4409,
+      "Y": 2092,
+      "Width": 338,
+      "Height": 260
+    },
+    "TerritoryType": 2,
+    "ID": 43,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3455,
+      "Y": 2749,
+      "Width": 394,
+      "Height": 137
+    },
+    "MapBounds": {
+      "X": 4791,
+      "Y": 1759,
+      "Width": 394,
+      "Height": 137
+    },
+    "TerritoryType": 2,
+    "ID": 44,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1188,
+      "Y": 3643,
+      "Width": 412,
+      "Height": 133
+    },
+    "MapBounds": {
+      "X": 4147,
+      "Y": 1757,
+      "Width": 412,
+      "Height": 133
+    },
+    "TerritoryType": 1,
+    "ID": 45,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3578,
+      "Y": 2117,
+      "Width": 196,
+      "Height": 214
+    },
+    "MapBounds": {
+      "X": 3739,
+      "Y": 2576,
+      "Width": 196,
+      "Height": 214
+    },
+    "TerritoryType": 2,
+    "ID": 46,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3120,
+      "Y": 991,
+      "Width": 264,
+      "Height": 176
+    },
+    "MapBounds": {
+      "X": 4863,
+      "Y": 1125,
+      "Width": 264,
+      "Height": 176
+    },
+    "TerritoryType": 1,
+    "ID": 47,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3625,
+      "Y": 3318,
+      "Width": 163,
+      "Height": 243
+    },
+    "MapBounds": {
+      "X": 4223,
+      "Y": 2297,
+      "Width": 163,
+      "Height": 243
+    },
+    "TerritoryType": 2,
+    "ID": 48,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 292,
+      "Y": 3513,
+      "Width": 149,
+      "Height": 284
+    },
+    "MapBounds": {
+      "X": 5148,
+      "Y": 708,
+      "Width": 149,
+      "Height": 284
+    },
+    "TerritoryType": 1,
+    "ID": 49,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 292,
+      "Y": 3271,
+      "Width": 227,
+      "Height": 242
+    },
+    "MapBounds": {
+      "X": 4285,
+      "Y": 2051,
+      "Width": 227,
+      "Height": 242
+    },
+    "TerritoryType": 2,
+    "ID": 50,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1011,
+      "Y": 3234,
+      "Width": 156,
+      "Height": 308
+    },
+    "MapBounds": {
+      "X": 5267,
+      "Y": 669,
+      "Width": 156,
+      "Height": 308
+    },
+    "TerritoryType": 1,
+    "ID": 51,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3578,
+      "Y": 2331,
+      "Width": 224,
+      "Height": 181
+    },
+    "MapBounds": {
+      "X": 3931,
+      "Y": 1746,
+      "Width": 224,
+      "Height": 181
+    },
+    "TerritoryType": 1,
+    "ID": 52,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3685,
+      "Y": 2999,
+      "Width": 178,
+      "Height": 181
+    },
+    "MapBounds": {
+      "X": 3856,
+      "Y": 1928,
+      "Width": 178,
+      "Height": 181
+    },
+    "TerritoryType": 2,
+    "ID": 53,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2656,
+      "Y": 2476,
+      "Width": 370,
+      "Height": 107
+    },
+    "MapBounds": {
+      "X": 4066,
+      "Y": 1986,
+      "Width": 370,
+      "Height": 107
+    },
+    "TerritoryType": 2,
+    "ID": 54,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3578,
+      "Y": 1965,
+      "Width": 282,
+      "Height": 152
+    },
+    "MapBounds": {
+      "X": 4136,
+      "Y": 2533,
+      "Width": 282,
+      "Height": 152
+    },
+    "TerritoryType": 2,
+    "ID": 55,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1011,
+      "Y": 3542,
+      "Width": 156,
+      "Height": 258
+    },
+    "MapBounds": {
+      "X": 3737,
+      "Y": 2320,
+      "Width": 156,
+      "Height": 258
+    },
+    "TerritoryType": 2,
+    "ID": 56,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3625,
+      "Y": 3561,
+      "Width": 230,
+      "Height": 168
+    },
+    "MapBounds": {
+      "X": 4501,
+      "Y": 2006,
+      "Width": 230,
+      "Height": 168
+    },
+    "TerritoryType": 2,
+    "ID": 57,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3004,
+      "Y": 3525,
+      "Width": 269,
+      "Height": 160
+    },
+    "MapBounds": {
+      "X": 5216,
+      "Y": 934,
+      "Width": 269,
+      "Height": 160
+    },
+    "TerritoryType": 1,
+    "ID": 58,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3656,
+      "Y": 209,
+      "Width": 176,
+      "Height": 184
+    },
+    "MapBounds": {
+      "X": 4713,
+      "Y": 1271,
+      "Width": 176,
+      "Height": 184
+    },
+    "TerritoryType": 1,
+    "ID": 59,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3455,
+      "Y": 2589,
+      "Width": 347,
+      "Height": 160
+    },
+    "MapBounds": {
+      "X": 4373,
+      "Y": 2214,
+      "Width": 347,
+      "Height": 160
+    },
+    "TerritoryType": 2,
+    "ID": 60,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2870,
+      "Y": 1785,
+      "Width": 210,
+      "Height": 166
+    },
+    "MapBounds": {
+      "X": 4890,
+      "Y": 1566,
+      "Width": 210,
+      "Height": 166
+    },
+    "TerritoryType": 2,
+    "ID": 61,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2847,
+      "Y": 3543,
+      "Width": 127,
+      "Height": 204
+    },
+    "MapBounds": {
+      "X": 3768,
+      "Y": 2114,
+      "Width": 127,
+      "Height": 204
+    },
+    "TerritoryType": 2,
+    "ID": 62,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1709,
+      "Y": 3219,
+      "Width": 194,
+      "Height": 235
+    },
+    "MapBounds": {
+      "X": 4622,
+      "Y": 2115,
+      "Width": 194,
+      "Height": 235
+    },
+    "TerritoryType": 2,
+    "ID": 63,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3442,
+      "Y": 1104,
+      "Width": 276,
+      "Height": 67
+    },
+    "MapBounds": {
+      "X": 2659,
+      "Y": 1876,
+      "Width": 276,
+      "Height": 67
+    },
+    "TerritoryType": 0,
+    "ID": 64,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3656,
+      "Y": 393,
+      "Width": 172,
+      "Height": 123
+    },
+    "MapBounds": {
+      "X": 4985,
+      "Y": 1282,
+      "Width": 172,
+      "Height": 123
+    },
+    "TerritoryType": 1,
+    "ID": 65,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 3664,
+      "Width": 135,
+      "Height": 148
+    },
+    "MapBounds": {
+      "X": 4858,
+      "Y": 1267,
+      "Width": 135,
+      "Height": 148
+    },
+    "TerritoryType": 1,
+    "ID": 66,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1768,
+      "Y": 3643,
+      "Width": 151,
+      "Height": 147
+    },
+    "MapBounds": {
+      "X": 5219,
+      "Y": 1051,
+      "Width": 151,
+      "Height": 147
+    },
+    "TerritoryType": 1,
+    "ID": 67,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1600,
+      "Y": 3643,
+      "Width": 168,
+      "Height": 149
+    },
+    "MapBounds": {
+      "X": 5065,
+      "Y": 1080,
+      "Width": 168,
+      "Height": 149
+    },
+    "TerritoryType": 1,
+    "ID": 68,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1073,
+      "Y": 2876,
+      "Width": 111,
+      "Height": 134
+    },
+    "MapBounds": {
+      "X": 5108,
+      "Y": 1185,
+      "Width": 111,
+      "Height": 134
+    },
+    "TerritoryType": 1,
+    "ID": 69,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3455,
+      "Y": 2886,
+      "Width": 252,
+      "Height": 95
+    },
+    "MapBounds": {
+      "X": 4725,
+      "Y": 1515,
+      "Width": 252,
+      "Height": 95
+    },
+    "TerritoryType": 2,
+    "ID": 70,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2638,
+      "Y": 964,
+      "Width": 118,
+      "Height": 137
+    },
+    "MapBounds": {
+      "X": 5104,
+      "Y": 1324,
+      "Width": 118,
+      "Height": 137
+    },
+    "TerritoryType": 1,
+    "ID": 71,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 135,
+      "Y": 3664,
+      "Width": 141,
+      "Height": 107
+    },
+    "MapBounds": {
+      "X": 4939,
+      "Y": 1393,
+      "Width": 141,
+      "Height": 107
+    },
+    "TerritoryType": 1,
+    "ID": 72,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3004,
+      "Y": 3685,
+      "Width": 186,
+      "Height": 89
+    },
+    "MapBounds": {
+      "X": 4776,
+      "Y": 1468,
+      "Width": 186,
+      "Height": 89
+    },
+    "TerritoryType": 2,
+    "ID": 73,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2638,
+      "Y": 782,
+      "Width": 121,
+      "Height": 182
+    },
+    "MapBounds": {
+      "X": 5053,
+      "Y": 1412,
+      "Width": 121,
+      "Height": 182
+    },
+    "TerritoryType": 1,
+    "ID": 74,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2201,
+      "Width": 90,
+      "Height": 153
+    },
+    "MapBounds": {
+      "X": 5084,
+      "Y": 1373,
+      "Width": 90,
+      "Height": 153
+    },
+    "TerritoryType": 1,
+    "ID": 75,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2354,
+      "Width": 78,
+      "Height": 104
+    },
+    "MapBounds": {
+      "X": 3903,
+      "Y": 2676,
+      "Width": 78,
+      "Height": 104
+    },
+    "TerritoryType": 2,
+    "ID": 76,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3026,
+      "Y": 2476,
+      "Width": 165,
+      "Height": 98
+    },
+    "MapBounds": {
+      "X": 5210,
+      "Y": 1157,
+      "Width": 165,
+      "Height": 98
+    },
+    "TerritoryType": 1,
+    "ID": 77,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2458,
+      "Width": 90,
+      "Height": 88
+    },
+    "MapBounds": {
+      "X": 4981,
+      "Y": 1500,
+      "Width": 90,
+      "Height": 88
+    },
+    "TerritoryType": 1,
+    "ID": 78,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 593,
+      "Y": 2827,
+      "Width": 121,
+      "Height": 49
+    },
+    "MapBounds": {
+      "X": 4821,
+      "Y": 1436,
+      "Width": 121,
+      "Height": 49
+    },
+    "TerritoryType": 2,
+    "ID": 79,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2546,
+      "Width": 56,
+      "Height": 65
+    },
+    "MapBounds": {
+      "X": 4722,
+      "Y": 2339,
+      "Width": 56,
+      "Height": 65
+    },
+    "TerritoryType": 2,
+    "ID": 80,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2638,
+      "Y": 1101,
+      "Width": 103,
+      "Height": 68
+    },
+    "MapBounds": {
+      "X": 4764,
+      "Y": 1435,
+      "Width": 103,
+      "Height": 68
+    },
+    "TerritoryType": 1,
+    "ID": 81,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2611,
+      "Width": 42,
+      "Height": 80
+    },
+    "MapBounds": {
+      "X": 5361,
+      "Y": 1043,
+      "Width": 42,
+      "Height": 80
+    },
+    "TerritoryType": 1,
+    "ID": 82,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1129,
+      "Y": 2736,
+      "Width": 58,
+      "Height": 37
+    },
+    "MapBounds": {
+      "X": 4003,
+      "Y": 2059,
+      "Width": 58,
+      "Height": 37
+    },
+    "TerritoryType": 2,
+    "ID": 83,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1138,
+      "Y": 2611,
+      "Width": 43,
+      "Height": 67
+    },
+    "MapBounds": {
+      "X": 4948,
+      "Y": 1495,
+      "Width": 43,
+      "Height": 67
+    },
+    "TerritoryType": 2,
+    "ID": 84,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2691,
+      "Width": 33,
+      "Height": 99
+    },
+    "MapBounds": {
+      "X": 5121,
+      "Y": 1581,
+      "Width": 33,
+      "Height": 99
+    },
+    "TerritoryType": 1,
+    "ID": 85,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1129,
+      "Y": 2691,
+      "Width": 55,
+      "Height": 45
+    },
+    "MapBounds": {
+      "X": 4886,
+      "Y": 1423,
+      "Width": 55,
+      "Height": 45
+    },
+    "TerritoryType": 1,
+    "ID": 86,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 714,
+      "Y": 2827,
+      "Width": 32,
+      "Height": 35
+    },
+    "MapBounds": {
+      "X": 4240,
+      "Y": 2399,
+      "Width": 32,
+      "Height": 35
+    },
+    "TerritoryType": 2,
+    "ID": 87,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1135,
+      "Y": 2790,
+      "Width": 32,
+      "Height": 38
+    },
+    "MapBounds": {
+      "X": 4971,
+      "Y": 1672,
+      "Width": 32,
+      "Height": 38
+    },
+    "TerritoryType": 2,
+    "ID": 88,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1152,
+      "Y": 2546,
+      "Width": 36,
+      "Height": 34
+    },
+    "MapBounds": {
+      "X": 4390,
+      "Y": 2189,
+      "Width": 36,
+      "Height": 34
+    },
+    "TerritoryType": 2,
+    "ID": 89,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1096,
+      "Y": 2790,
+      "Width": 39,
+      "Height": 39
+    },
+    "MapBounds": {
+      "X": 3778,
+      "Y": 2410,
+      "Width": 39,
+      "Height": 39
+    },
+    "TerritoryType": 2,
+    "ID": 90,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 746,
+      "Y": 2827,
+      "Width": 44,
+      "Height": 18
+    },
+    "MapBounds": {
+      "X": 4883,
+      "Y": 1407,
+      "Width": 44,
+      "Height": 18
+    },
+    "TerritoryType": 1,
+    "ID": 91,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2741,
+      "Y": 1101,
+      "Width": 20,
+      "Height": 19
+    },
+    "MapBounds": {
+      "X": 4982,
+      "Y": 1497,
+      "Width": 20,
+      "Height": 19
+    },
+    "TerritoryType": 1,
+    "ID": 92,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1152,
+      "Y": 2580,
+      "Width": 24,
+      "Height": 18
+    },
+    "MapBounds": {
+      "X": 5103,
+      "Y": 1351,
+      "Width": 24,
+      "Height": 18
+    },
+    "TerritoryType": 1,
+    "ID": 93,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1152,
+      "Y": 2598,
+      "Width": 27,
+      "Height": 13
+    },
+    "MapBounds": {
+      "X": 4198,
+      "Y": 2281,
+      "Width": 27,
+      "Height": 13
+    },
+    "TerritoryType": 2,
+    "ID": 94,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1174,
+      "Y": 2354,
+      "Width": 14,
+      "Height": 9
+    },
+    "MapBounds": {
+      "X": 4890,
+      "Y": 1400,
+      "Width": 14,
+      "Height": 9
+    },
+    "TerritoryType": 1,
+    "ID": 95,
+    "RegionName": "Fill This in",
+    "BitField": ""
+  }
+]

@@ -6,7 +6,9 @@ using APUSH_Game.Interface;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("Tools")]
 namespace APUSH_Game
 {
     public class GameRoot : Game

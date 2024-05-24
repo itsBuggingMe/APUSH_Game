@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FastBitmapLib" Version="2.1.0" />
     <PackageReference Include="System.Drawing.Common" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APUSH_Game\APUSH_Game.csproj" />
   </ItemGroup>
 
 </Project>
