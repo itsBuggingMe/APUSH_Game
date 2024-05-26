@@ -23,9 +23,7 @@ namespace APUSH_Game.GameState
 
         public void Draw(GameTime Gametime)
         {
-            Globals.ShapeBatch.Begin();
             world.Draw(Gametime);
-            Globals.ShapeBatch.End();
         }
 
         #region ForLater

@@ -11,6 +11,8 @@ namespace APUSH_Game.GameState
         private readonly List<IComponent[]> _entitiesUpdate = new();
         private readonly List<IComponent[]> _entitiesDraw = new();
         private readonly Stack<int> _ids = new();
+        private readonly Stack<int> _toDelete = new();
+
         private int _counter;
 
         private GameWorld worldData;
@@ -25,10 +27,19 @@ namespace APUSH_Game.GameState
             for (int i = 0; i < _entitiesUpdate.Count; i++)
             {
                 var locArr = _entitiesUpdate[i];
+                if (locArr is null)
+                    continue;
                 for (int c = 0; c < locArr.Length; c++)
                 {
                     locArr[c].Update(gameTime);
                 }
+            }
+
+            while(_toDelete.TryPop(out int r))
+            {
+                _entitiesUpdate[r] = null;
+                _entitiesDraw[r] = null;
+                _ids.Push(r);
             }
         }
 
@@ -37,6 +48,8 @@ namespace APUSH_Game.GameState
             for (int i = 0; i < _entitiesDraw.Count; i++)
             {
                 var locArr = _entitiesDraw[i];
+                if (locArr is null)
+                    continue;
                 for (int c = 0; c < locArr.Length; c++)
                 {
                     locArr[c].Update(gameTime);
@@ -50,6 +63,14 @@ namespace APUSH_Game.GameState
                 return comp;
             Throw(nameof(id));
             return default;
+        }
+
+        public EntityManager OutGetOrThrow<T>(int id, out T comp) where T : IUpdateComponent
+        {
+            if (TryGetComponent(id, out comp))
+                return this;
+            Throw(nameof(id));
+            return this;
         }
 
         public bool TryGetComponent<T>(int id, [NotNullWhen(true)] out T comp) where T : IUpdateComponent
@@ -153,9 +174,7 @@ namespace APUSH_Game.GameState
             if (!IsValidID(id))
                 Throw(nameof(id));
 
-            _entitiesUpdate[id] = null;
-            _entitiesDraw[id] = null;
-            _ids.Push(id);
+            _toDelete.Push(id);
         }
 
         public bool IsValidID(int id)
@@ -166,7 +185,6 @@ namespace APUSH_Game.GameState
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void Throw(string name)
         {
-            return;
             throw new ArgumentException(name);
         }
     }

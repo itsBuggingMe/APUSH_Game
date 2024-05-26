@@ -3,7 +3,6 @@ using System;
 using APUSH_Game.Helpers;
 using APUSH_Game.GameState;
 using APUSH_Game.Interface;
-using Newtonsoft.Json;
 using System.Linq;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -25,8 +24,6 @@ namespace APUSH_Game
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
-            IsFixedTimeStep = false;
-            _graphics.SynchronizeWithVerticalRetrace = false;
             Window.AllowUserResizing = true;
             Window.ClientSizeChanged += new EventHandler<EventArgs>(Window_ClientSizeChanged);
             _graphics.GraphicsProfile = GraphicsProfile.HiDef;
@@ -39,13 +36,12 @@ namespace APUSH_Game
         protected override void Initialize()
         {
             base.Initialize();
-            Gui.Initalize(this, new Point(1920, 1080));
-
             Globals.Initialize(this, _graphics);
-            ScreenManager.Initalise(new MainGameState());
-
-            Globals.LoadFont(Path.Combine(GameInfo.ContentDirectory, "depixel", "DePixelKlein.ttf"));
+            Globals.LoadFont("Font");
+            Gui.Initalize(this, new Point(1920, 1080));
             ToggleBorderless();
+
+            ScreenManager.Initalise(new MainGameState());
         }
 
         protected override void Update(GameTime gameTime)
@@ -66,10 +62,7 @@ namespace APUSH_Game
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.White);
-
             ScreenManager.Instance.Draw(gameTime);
- 
             base.Draw(gameTime);
         }
 

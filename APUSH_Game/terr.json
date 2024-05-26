@@ -3,1728 +3,1920 @@
     "TextureSource": {
       "X": 0,
       "Y": 0,
-      "Width": 1493,
-      "Height": 1171
+      "Width": 1501,
+      "Height": 1179
     },
     "MapBounds": {
       "X": 1862,
       "Y": 371,
-      "Width": 1493,
-      "Height": 1171
+      "Width": 1501,
+      "Height": 1179
     },
+    "CenterX": 709.6001,
+    "CenterY": 619.4999,
     "TerritoryType": 0,
     "ID": 0,
-    "RegionName": "Fill This in",
+    "RegionName": "Nebraska Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1188,
-      "Y": 1171,
-      "Width": 1286,
-      "Height": 794
+      "X": 1196,
+      "Y": 1179,
+      "Width": 1294,
+      "Height": 802
     },
     "MapBounds": {
       "X": 1379,
       "Y": 1683,
-      "Width": 1286,
-      "Height": 794
+      "Width": 1294,
+      "Height": 802
     },
+    "CenterX": 1903.0266,
+    "CenterY": 1586.2081,
     "TerritoryType": 0,
     "ID": 1,
-    "RegionName": "Fill This in",
+    "RegionName": "New Mexico Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1493,
+      "X": 1501,
       "Y": 0,
-      "Width": 1270,
-      "Height": 782
+      "Width": 1278,
+      "Height": 790
     },
     "MapBounds": {
       "X": 1185,
       "Y": 1058,
-      "Width": 1270,
-      "Height": 782
+      "Width": 1278,
+      "Height": 790
     },
+    "CenterX": 2114.994,
+    "CenterY": 400.09772,
     "TerritoryType": 0,
     "ID": 2,
-    "RegionName": "Fill This in",
+    "RegionName": "Utah Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
       "X": 0,
-      "Y": 1171,
-      "Width": 1188,
-      "Height": 1030
+      "Y": 1179,
+      "Width": 1196,
+      "Height": 1038
     },
     "MapBounds": {
       "X": 1078,
       "Y": 211,
-      "Width": 1188,
-      "Height": 1030
+      "Width": 1196,
+      "Height": 1038
     },
+    "CenterX": 590.3742,
+    "CenterY": 1659.3328,
     "TerritoryType": 0,
     "ID": 3,
-    "RegionName": "Fill This in",
+    "RegionName": "Washington Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1188,
-      "Y": 1965,
-      "Width": 733,
-      "Height": 1254
+      "X": 1196,
+      "Y": 1981,
+      "Width": 741,
+      "Height": 1262
     },
     "MapBounds": {
       "X": 852,
       "Y": 960,
-      "Width": 733,
-      "Height": 1254
+      "Width": 741,
+      "Height": 1262
     },
+    "CenterX": 1517.6384,
+    "CenterY": 2630.2507,
     "TerritoryType": 1,
     "ID": 4,
-    "RegionName": "Fill This in",
+    "RegionName": "California",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1493,
-      "Y": 782,
-      "Width": 1145,
-      "Height": 388
+      "X": 1937,
+      "Y": 1981,
+      "Width": 1153,
+      "Height": 396
     },
     "MapBounds": {
       "X": 2284,
       "Y": 1505,
-      "Width": 1145,
-      "Height": 388
+      "Width": 1153,
+      "Height": 396
     },
+    "CenterX": 2592.6182,
+    "CenterY": 2177.2703,
     "TerritoryType": 0,
     "ID": 5,
-    "RegionName": "Fill This in",
+    "RegionName": "Kansas Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1921,
-      "Y": 1965,
-      "Width": 735,
-      "Height": 624
+      "X": 0,
+      "Y": 2217,
+      "Width": 743,
+      "Height": 632
     },
     "MapBounds": {
       "X": 916,
       "Y": 484,
-      "Width": 735,
-      "Height": 624
+      "Width": 743,
+      "Height": 632
     },
+    "CenterX": 363.57126,
+    "CenterY": 2555.7092,
     "TerritoryType": 0,
     "ID": 6,
-    "RegionName": "Fill This in",
+    "RegionName": "Oregon",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 0,
-      "Y": 2201,
-      "Width": 593,
-      "Height": 675
+      "X": 1937,
+      "Y": 2377,
+      "Width": 601,
+      "Height": 683
     },
     "MapBounds": {
       "X": 3213,
       "Y": 459,
-      "Width": 593,
-      "Height": 675
+      "Width": 601,
+      "Height": 683
     },
+    "CenterX": 2165.8335,
+    "CenterY": 2758.001,
     "TerritoryType": 1,
     "ID": 7,
-    "RegionName": "Fill This in",
+    "RegionName": "Minnesota",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1921,
-      "Y": 2589,
-      "Width": 484,
-      "Height": 766
+      "X": 2490,
+      "Y": 1179,
+      "Width": 492,
+      "Height": 774
     },
     "MapBounds": {
       "X": 2781,
       "Y": 484,
-      "Width": 484,
-      "Height": 766
+      "Width": 492,
+      "Height": 774
     },
+    "CenterX": 2783.2988,
+    "CenterY": 1480.0992,
     "TerritoryType": 0,
     "ID": 8,
-    "RegionName": "Fill This in",
+    "RegionName": "Unorganized Dakota Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 593,
-      "Y": 2201,
-      "Width": 503,
-      "Height": 626
+      "X": 2779,
+      "Y": 0,
+      "Width": 511,
+      "Height": 634
     },
     "MapBounds": {
       "X": 2615,
       "Y": 2134,
-      "Width": 503,
-      "Height": 626
+      "Width": 511,
+      "Height": 634
     },
+    "CenterX": 2988.474,
+    "CenterY": 288.81122,
     "TerritoryType": 2,
     "ID": 9,
-    "RegionName": "Fill This in",
+    "RegionName": "Central Texas",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2656,
-      "Y": 1965,
-      "Width": 548,
-      "Height": 511
+      "X": 607,
+      "Y": 2849,
+      "Width": 556,
+      "Height": 519
     },
     "MapBounds": {
       "X": 3000,
       "Y": 2252,
-      "Width": 548,
-      "Height": 511
+      "Width": 556,
+      "Height": 519
     },
+    "CenterX": 904.7763,
+    "CenterY": 3089.7517,
     "TerritoryType": 2,
     "ID": 10,
-    "RegionName": "Fill This in",
+    "RegionName": "Eastern Texas",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2405,
-      "Y": 2589,
-      "Width": 599,
-      "Height": 523
+      "X": 0,
+      "Y": 2849,
+      "Width": 607,
+      "Height": 531
     },
     "MapBounds": {
       "X": 3335,
       "Y": 1472,
-      "Width": 599,
-      "Height": 523
+      "Width": 607,
+      "Height": 531
     },
+    "CenterX": 289.59454,
+    "CenterY": 3110.4626,
     "TerritoryType": 1,
     "ID": 11,
-    "RegionName": "Fill This in",
+    "RegionName": "Illinois",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2474,
-      "Y": 1171,
-      "Width": 618,
-      "Height": 614
+      "X": 2538,
+      "Y": 2377,
+      "Width": 626,
+      "Height": 622
     },
     "MapBounds": {
       "X": 2799,
       "Y": 2573,
-      "Width": 618,
-      "Height": 614
+      "Width": 626,
+      "Height": 622
     },
+    "CenterX": 2819.5728,
+    "CenterY": 2647.2927,
     "TerritoryType": 2,
     "ID": 12,
-    "RegionName": "Fill This in",
+    "RegionName": "Southern Texas",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 0,
-      "Y": 2876,
-      "Width": 521,
-      "Height": 395
+      "X": 2538,
+      "Y": 2999,
+      "Width": 529,
+      "Height": 403
     },
     "MapBounds": {
       "X": 2928,
       "Y": 1892,
-      "Width": 521,
-      "Height": 395
+      "Width": 529,
+      "Height": 403
     },
+    "CenterX": 2807.2395,
+    "CenterY": 3180.4568,
     "TerritoryType": 0,
     "ID": 13,
-    "RegionName": "Fill This in",
+    "RegionName": "Indian Territory",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 521,
-      "Y": 2876,
-      "Width": 552,
-      "Height": 358
+      "X": 1501,
+      "Y": 790,
+      "Width": 560,
+      "Height": 366
     },
     "MapBounds": {
       "X": 3255,
       "Y": 1132,
-      "Width": 552,
-      "Height": 358
+      "Width": 560,
+      "Height": 366
     },
+    "CenterX": 1767.0387,
+    "CenterY": 960.0909,
     "TerritoryType": 1,
     "ID": 14,
-    "RegionName": "Fill This in",
+    "RegionName": "Iowa",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2763,
-      "Y": 0,
-      "Width": 479,
-      "Height": 522
+      "X": 2779,
+      "Y": 634,
+      "Width": 487,
+      "Height": 530
     },
     "MapBounds": {
       "X": 3560,
       "Y": 713,
-      "Width": 479,
-      "Height": 522
+      "Width": 487,
+      "Height": 530
     },
+    "CenterX": 3018.3462,
+    "CenterY": 909.98236,
     "TerritoryType": 1,
     "ID": 15,
-    "RegionName": "Fill This in",
+    "RegionName": "Wisconsin",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2763,
-      "Y": 522,
-      "Width": 357,
-      "Height": 640
+      "X": 2982,
+      "Y": 1179,
+      "Width": 365,
+      "Height": 648
     },
     "MapBounds": {
       "X": 3703,
       "Y": 1228,
-      "Width": 357,
-      "Height": 640
+      "Width": 365,
+      "Height": 648
     },
+    "CenterX": 3182.6316,
+    "CenterY": 1471.0875,
     "TerritoryType": 1,
     "ID": 16,
-    "RegionName": "Fill This in",
+    "RegionName": "Illinois",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3004,
-      "Y": 2589,
-      "Width": 451,
-      "Height": 410
+      "X": 1937,
+      "Y": 3060,
+      "Width": 459,
+      "Height": 418
     },
     "MapBounds": {
       "X": 3438,
       "Y": 1945,
-      "Width": 451,
-      "Height": 410
+      "Width": 459,
+      "Height": 418
     },
+    "CenterX": 2139.8145,
+    "CenterY": 3252.274,
     "TerritoryType": 2,
     "ID": 17,
-    "RegionName": "Fill This in",
+    "RegionName": "Arkansas",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3092,
-      "Y": 1171,
-      "Width": 353,
-      "Height": 479
+      "X": 3067,
+      "Y": 2999,
+      "Width": 361,
+      "Height": 487
     },
     "MapBounds": {
       "X": 4094,
       "Y": 821,
-      "Width": 353,
-      "Height": 479
+      "Width": 361,
+      "Height": 487
     },
+    "CenterX": 3230.059,
+    "CenterY": 3261.5002,
     "TerritoryType": 1,
     "ID": 18,
-    "RegionName": "Fill This in",
+    "RegionName": "Eastern Michigan",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2405,
-      "Y": 3112,
-      "Width": 379,
-      "Height": 431
+      "X": 3164,
+      "Y": 2377,
+      "Width": 387,
+      "Height": 439
     },
     "MapBounds": {
       "X": 4269,
       "Y": 1211,
-      "Width": 379,
-      "Height": 431
+      "Width": 387,
+      "Height": 439
     },
+    "CenterX": 3354.9539,
+    "CenterY": 2596.695,
     "TerritoryType": 1,
     "ID": 19,
-    "RegionName": "Fill This in",
+    "RegionName": "Ohio",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 521,
-      "Y": 3234,
-      "Width": 274,
-      "Height": 482
+      "X": 3290,
+      "Y": 0,
+      "Width": 282,
+      "Height": 490
     },
     "MapBounds": {
       "X": 4026,
       "Y": 1290,
-      "Width": 274,
-      "Height": 482
+      "Width": 282,
+      "Height": 490
     },
+    "CenterX": 3423.6313,
+    "CenterY": 224.57802,
     "TerritoryType": 1,
     "ID": 20,
-    "RegionName": "Fill This in",
+    "RegionName": "Indiana",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3120,
-      "Y": 522,
-      "Width": 322,
-      "Height": 469
+      "X": 1196,
+      "Y": 3243,
+      "Width": 330,
+      "Height": 477
     },
     "MapBounds": {
       "X": 4652,
       "Y": 2680,
-      "Width": 322,
-      "Height": 469
+      "Width": 330,
+      "Height": 477
     },
+    "CenterX": 1366.0955,
+    "CenterY": 3465.0671,
     "TerritoryType": 2,
     "ID": 21,
-    "RegionName": "Fill This in",
+    "RegionName": "South Florida",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3004,
-      "Y": 2999,
-      "Width": 339,
-      "Height": 526
+      "X": 743,
+      "Y": 2217,
+      "Width": 347,
+      "Height": 534
     },
     "MapBounds": {
       "X": 5318,
       "Y": 377,
-      "Width": 339,
-      "Height": 526
+      "Width": 347,
+      "Height": 534
     },
+    "CenterX": 881.1639,
+    "CenterY": 2449.857,
     "TerritoryType": 1,
     "ID": 22,
-    "RegionName": "Fill This in",
+    "RegionName": "Maine",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 795,
-      "Y": 3234,
-      "Width": 216,
-      "Height": 563
+      "X": 1526,
+      "Y": 3243,
+      "Width": 224,
+      "Height": 571
     },
     "MapBounds": {
       "X": 3843,
       "Y": 2101,
-      "Width": 216,
-      "Height": 563
+      "Width": 224,
+      "Height": 571
     },
+    "CenterX": 1644.078,
+    "CenterY": 3513.8306,
     "TerritoryType": 2,
     "ID": 23,
-    "RegionName": "Fill This in",
+    "RegionName": "Eastern Mississippi",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 0,
-      "Y": 3271,
-      "Width": 292,
-      "Height": 393
+      "X": 3347,
+      "Y": 1179,
+      "Width": 300,
+      "Height": 401
     },
     "MapBounds": {
       "X": 3499,
       "Y": 2356,
-      "Width": 292,
-      "Height": 393
+      "Width": 300,
+      "Height": 401
     },
+    "CenterX": 3485.5637,
+    "CenterY": 1354.8787,
     "TerritoryType": 2,
     "ID": 24,
-    "RegionName": "Fill This in",
+    "RegionName": "Western Louisiana",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3242,
-      "Y": 209,
-      "Width": 414,
-      "Height": 295
+      "X": 3290,
+      "Y": 872,
+      "Width": 422,
+      "Height": 303
     },
     "MapBounds": {
       "X": 4347,
       "Y": 2268,
-      "Width": 414,
-      "Height": 295
+      "Width": 422,
+      "Height": 303
     },
+    "CenterX": 3482.5444,
+    "CenterY": 1040.6265,
     "TerritoryType": 2,
     "ID": 25,
-    "RegionName": "Fill This in",
+    "RegionName": "South Georgia",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3204,
-      "Y": 1965,
-      "Width": 374,
-      "Height": 374
+      "X": 3290,
+      "Y": 490,
+      "Width": 382,
+      "Height": 382
     },
     "MapBounds": {
       "X": 2268,
       "Y": 2426,
-      "Width": 374,
-      "Height": 374
+      "Width": 382,
+      "Height": 382
     },
+    "CenterX": 3519.7078,
+    "CenterY": 649.7426,
     "TerritoryType": 2,
     "ID": 26,
-    "RegionName": "Fill This in",
+    "RegionName": "Western Texas",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3343,
-      "Y": 3318,
-      "Width": 282,
-      "Height": 378
+      "X": 2538,
+      "Y": 3402,
+      "Width": 290,
+      "Height": 386
     },
     "MapBounds": {
       "X": 4928,
       "Y": 745,
-      "Width": 282,
-      "Height": 378
+      "Width": 290,
+      "Height": 386
     },
+    "CenterX": 2690.6506,
+    "CenterY": 3591.9326,
     "TerritoryType": 1,
     "ID": 27,
-    "RegionName": "Fill This in",
+    "RegionName": "Northeastern New York",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3242,
-      "Y": 0,
-      "Width": 592,
-      "Height": 209
+      "X": 2061,
+      "Y": 957,
+      "Width": 600,
+      "Height": 217
     },
     "MapBounds": {
       "X": 4025,
       "Y": 1846,
-      "Width": 592,
-      "Height": 209
+      "Width": 600,
+      "Height": 217
     },
+    "CenterX": 2322.8245,
+    "CenterY": 1035.9872,
     "TerritoryType": 2,
     "ID": 28,
-    "RegionName": "Fill This in",
+    "RegionName": "Northern Tennessee",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2405,
-      "Y": 3543,
-      "Width": 442,
-      "Height": 227
+      "X": 607,
+      "Y": 3368,
+      "Width": 450,
+      "Height": 235
     },
     "MapBounds": {
       "X": 4709,
       "Y": 1881,
-      "Width": 442,
-      "Height": 227
+      "Width": 450,
+      "Height": 235
     },
+    "CenterX": 828.9687,
+    "CenterY": 3470.0798,
     "TerritoryType": 2,
     "ID": 29,
-    "RegionName": "Fill This in",
+    "RegionName": "Southern North Carolina",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2784,
-      "Y": 3112,
-      "Width": 218,
-      "Height": 361
+      "X": 350,
+      "Y": 3380,
+      "Width": 226,
+      "Height": 369
     },
     "MapBounds": {
       "X": 4042,
       "Y": 2283,
-      "Width": 218,
-      "Height": 361
+      "Width": 226,
+      "Height": 369
     },
+    "CenterX": 445.6434,
+    "CenterY": 3538.8142,
     "TerritoryType": 2,
     "ID": 30,
-    "RegionName": "Fill This in",
+    "RegionName": "Southwest Alabama",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3445,
-      "Y": 1445,
-      "Width": 285,
-      "Height": 234
+      "X": 3572,
+      "Y": 0,
+      "Width": 293,
+      "Height": 242
     },
     "MapBounds": {
       "X": 2644,
       "Y": 1935,
-      "Width": 285,
-      "Height": 234
+      "Width": 293,
+      "Height": 242
     },
+    "CenterX": 3718.6,
+    "CenterY": 112.91194,
     "TerritoryType": 2,
     "ID": 31,
-    "RegionName": "Fill This in",
+    "RegionName": "Texas Panhandle",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3445,
-      "Y": 1679,
-      "Width": 293,
-      "Height": 212
+      "X": 3572,
+      "Y": 242,
+      "Width": 301,
+      "Height": 220
     },
     "MapBounds": {
       "X": 4044,
       "Y": 2082,
-      "Width": 293,
-      "Height": 212
+      "Width": 301,
+      "Height": 220
     },
+    "CenterX": 3710.7412,
+    "CenterY": 352.0801,
     "TerritoryType": 2,
     "ID": 32,
-    "RegionName": "Fill This in",
+    "RegionName": "Northern Alabama",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1188,
-      "Y": 3484,
-      "Width": 680,
-      "Height": 159
+      "X": 2061,
+      "Y": 790,
+      "Width": 688,
+      "Height": 167
     },
     "MapBounds": {
       "X": 4460,
       "Y": 1703,
-      "Width": 680,
-      "Height": 159
+      "Width": 688,
+      "Height": 167
     },
+    "CenterX": 2392.6624,
+    "CenterY": 861.30774,
     "TerritoryType": 2,
     "ID": 33,
-    "RegionName": "Fill This in",
+    "RegionName": "Southern Virginia",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1921,
-      "Y": 3596,
-      "Width": 425,
-      "Height": 204
+      "X": 3428,
+      "Y": 2999,
+      "Width": 433,
+      "Height": 212
     },
     "MapBounds": {
       "X": 4147,
       "Y": 1590,
-      "Width": 425,
-      "Height": 204
+      "Width": 433,
+      "Height": 212
     },
+    "CenterX": 3636.0823,
+    "CenterY": 3118.1453,
     "TerritoryType": 1,
     "ID": 34,
-    "RegionName": "Fill This in",
+    "RegionName": "Northern Kentucky",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3442,
-      "Y": 891,
-      "Width": 405,
-      "Height": 213
+      "X": 1937,
+      "Y": 3478,
+      "Width": 413,
+      "Height": 221
     },
     "MapBounds": {
       "X": 4411,
       "Y": 2514,
-      "Width": 405,
-      "Height": 213
+      "Width": 413,
+      "Height": 221
     },
+    "CenterX": 2154.6938,
+    "CenterY": 3584.4175,
     "TerritoryType": 2,
     "ID": 35,
-    "RegionName": "Fill This in",
+    "RegionName": "Northern Florida",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3445,
-      "Y": 1171,
-      "Width": 274,
-      "Height": 274
+      "X": 3551,
+      "Y": 2609,
+      "Width": 282,
+      "Height": 282
     },
     "MapBounds": {
       "X": 4686,
       "Y": 2024,
-      "Width": 274,
-      "Height": 274
+      "Width": 282,
+      "Height": 282
     },
+    "CenterX": 3683.9863,
+    "CenterY": 2728.4219,
     "TerritoryType": 2,
     "ID": 36,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3343,
-      "Y": 2999,
-      "Width": 342,
-      "Height": 319
-    },
-    "MapBounds": {
-      "X": 4628,
-      "Y": 1143,
-      "Width": 342,
-      "Height": 319
-    },
-    "TerritoryType": 1,
-    "ID": 37,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1188,
-      "Y": 3219,
-      "Width": 521,
-      "Height": 265
-    },
-    "MapBounds": {
-      "X": 3757,
-      "Y": 649,
-      "Width": 521,
-      "Height": 265
-    },
-    "TerritoryType": 1,
-    "ID": 38,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3204,
-      "Y": 2339,
-      "Width": 335,
-      "Height": 224
-    },
-    "MapBounds": {
-      "X": 4688,
-      "Y": 965,
-      "Width": 335,
-      "Height": 224
-    },
-    "TerritoryType": 1,
-    "ID": 39,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1921,
-      "Y": 3355,
-      "Width": 436,
-      "Height": 241
-    },
-    "MapBounds": {
-      "X": 4404,
-      "Y": 1817,
-      "Width": 436,
-      "Height": 241
-    },
-    "TerritoryType": 2,
-    "ID": 40,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3442,
-      "Y": 522,
-      "Width": 256,
-      "Height": 369
-    },
-    "MapBounds": {
-      "X": 4512,
-      "Y": 1367,
-      "Width": 256,
-      "Height": 369
-    },
-    "TerritoryType": 1,
-    "ID": 41,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 2474,
-      "Y": 1785,
-      "Width": 396,
-      "Height": 169
-    },
-    "MapBounds": {
-      "X": 4575,
-      "Y": 1580,
-      "Width": 396,
-      "Height": 169
-    },
-    "TerritoryType": 2,
-    "ID": 42,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3092,
-      "Y": 1650,
-      "Width": 338,
-      "Height": 260
-    },
-    "MapBounds": {
-      "X": 4409,
-      "Y": 2092,
-      "Width": 338,
-      "Height": 260
-    },
-    "TerritoryType": 2,
-    "ID": 43,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3455,
-      "Y": 2749,
-      "Width": 394,
-      "Height": 137
-    },
-    "MapBounds": {
-      "X": 4791,
-      "Y": 1759,
-      "Width": 394,
-      "Height": 137
-    },
-    "TerritoryType": 2,
-    "ID": 44,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1188,
-      "Y": 3643,
-      "Width": 412,
-      "Height": 133
-    },
-    "MapBounds": {
-      "X": 4147,
-      "Y": 1757,
-      "Width": 412,
-      "Height": 133
-    },
-    "TerritoryType": 1,
-    "ID": 45,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3578,
-      "Y": 2117,
-      "Width": 196,
-      "Height": 214
-    },
-    "MapBounds": {
-      "X": 3739,
-      "Y": 2576,
-      "Width": 196,
-      "Height": 214
-    },
-    "TerritoryType": 2,
-    "ID": 46,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3120,
-      "Y": 991,
-      "Width": 264,
-      "Height": 176
-    },
-    "MapBounds": {
-      "X": 4863,
-      "Y": 1125,
-      "Width": 264,
-      "Height": 176
-    },
-    "TerritoryType": 1,
-    "ID": 47,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3625,
-      "Y": 3318,
-      "Width": 163,
-      "Height": 243
-    },
-    "MapBounds": {
-      "X": 4223,
-      "Y": 2297,
-      "Width": 163,
-      "Height": 243
-    },
-    "TerritoryType": 2,
-    "ID": 48,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 292,
-      "Y": 3513,
-      "Width": 149,
-      "Height": 284
-    },
-    "MapBounds": {
-      "X": 5148,
-      "Y": 708,
-      "Width": 149,
-      "Height": 284
-    },
-    "TerritoryType": 1,
-    "ID": 49,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 292,
-      "Y": 3271,
-      "Width": 227,
-      "Height": 242
-    },
-    "MapBounds": {
-      "X": 4285,
-      "Y": 2051,
-      "Width": 227,
-      "Height": 242
-    },
-    "TerritoryType": 2,
-    "ID": 50,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1011,
-      "Y": 3234,
-      "Width": 156,
-      "Height": 308
-    },
-    "MapBounds": {
-      "X": 5267,
-      "Y": 669,
-      "Width": 156,
-      "Height": 308
-    },
-    "TerritoryType": 1,
-    "ID": 51,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3578,
-      "Y": 2331,
-      "Width": 224,
-      "Height": 181
-    },
-    "MapBounds": {
-      "X": 3931,
-      "Y": 1746,
-      "Width": 224,
-      "Height": 181
-    },
-    "TerritoryType": 1,
-    "ID": 52,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3685,
-      "Y": 2999,
-      "Width": 178,
-      "Height": 181
-    },
-    "MapBounds": {
-      "X": 3856,
-      "Y": 1928,
-      "Width": 178,
-      "Height": 181
-    },
-    "TerritoryType": 2,
-    "ID": 53,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 2656,
-      "Y": 2476,
-      "Width": 370,
-      "Height": 107
-    },
-    "MapBounds": {
-      "X": 4066,
-      "Y": 1986,
-      "Width": 370,
-      "Height": 107
-    },
-    "TerritoryType": 2,
-    "ID": 54,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3578,
-      "Y": 1965,
-      "Width": 282,
-      "Height": 152
-    },
-    "MapBounds": {
-      "X": 4136,
-      "Y": 2533,
-      "Width": 282,
-      "Height": 152
-    },
-    "TerritoryType": 2,
-    "ID": 55,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1011,
-      "Y": 3542,
-      "Width": 156,
-      "Height": 258
-    },
-    "MapBounds": {
-      "X": 3737,
-      "Y": 2320,
-      "Width": 156,
-      "Height": 258
-    },
-    "TerritoryType": 2,
-    "ID": 56,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3625,
-      "Y": 3561,
-      "Width": 230,
-      "Height": 168
-    },
-    "MapBounds": {
-      "X": 4501,
-      "Y": 2006,
-      "Width": 230,
-      "Height": 168
-    },
-    "TerritoryType": 2,
-    "ID": 57,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3004,
-      "Y": 3525,
-      "Width": 269,
-      "Height": 160
-    },
-    "MapBounds": {
-      "X": 5216,
-      "Y": 934,
-      "Width": 269,
-      "Height": 160
-    },
-    "TerritoryType": 1,
-    "ID": 58,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3656,
-      "Y": 209,
-      "Width": 176,
-      "Height": 184
-    },
-    "MapBounds": {
-      "X": 4713,
-      "Y": 1271,
-      "Width": 176,
-      "Height": 184
-    },
-    "TerritoryType": 1,
-    "ID": 59,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3455,
-      "Y": 2589,
-      "Width": 347,
-      "Height": 160
-    },
-    "MapBounds": {
-      "X": 4373,
-      "Y": 2214,
-      "Width": 347,
-      "Height": 160
-    },
-    "TerritoryType": 2,
-    "ID": 60,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 2870,
-      "Y": 1785,
-      "Width": 210,
-      "Height": 166
-    },
-    "MapBounds": {
-      "X": 4890,
-      "Y": 1566,
-      "Width": 210,
-      "Height": 166
-    },
-    "TerritoryType": 2,
-    "ID": 61,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 2847,
-      "Y": 3543,
-      "Width": 127,
-      "Height": 204
-    },
-    "MapBounds": {
-      "X": 3768,
-      "Y": 2114,
-      "Width": 127,
-      "Height": 204
-    },
-    "TerritoryType": 2,
-    "ID": 62,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 1709,
-      "Y": 3219,
-      "Width": 194,
-      "Height": 235
-    },
-    "MapBounds": {
-      "X": 4622,
-      "Y": 2115,
-      "Width": 194,
-      "Height": 235
-    },
-    "TerritoryType": 2,
-    "ID": 63,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3442,
-      "Y": 1104,
-      "Width": 276,
-      "Height": 67
-    },
-    "MapBounds": {
-      "X": 2659,
-      "Y": 1876,
-      "Width": 276,
-      "Height": 67
-    },
-    "TerritoryType": 0,
-    "ID": 64,
-    "RegionName": "Fill This in",
-    "BitField": ""
-  },
-  {
-    "TextureSource": {
-      "X": 3656,
-      "Y": 393,
-      "Width": 172,
-      "Height": 123
-    },
-    "MapBounds": {
-      "X": 4985,
-      "Y": 1282,
-      "Width": 172,
-      "Height": 123
-    },
-    "TerritoryType": 1,
-    "ID": 65,
-    "RegionName": "Fill This in",
+    "RegionName": "Eastern South Carolina",
     "BitField": ""
   },
   {
     "TextureSource": {
       "X": 0,
-      "Y": 3664,
+      "Y": 3380,
+      "Width": 350,
+      "Height": 327
+    },
+    "MapBounds": {
+      "X": 4628,
+      "Y": 1143,
+      "Width": 350,
+      "Height": 327
+    },
+    "CenterX": 125.3006,
+    "CenterY": 3504.3638,
+    "TerritoryType": 1,
+    "ID": 37,
+    "RegionName": "Western Pennsylvania",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3090,
+      "Y": 1981,
+      "Width": 529,
+      "Height": 273
+    },
+    "MapBounds": {
+      "X": 3757,
+      "Y": 649,
+      "Width": 529,
+      "Height": 273
+    },
+    "CenterX": 3332.1033,
+    "CenterY": 2104.476,
+    "TerritoryType": 1,
+    "ID": 38,
+    "RegionName": "Western Michigan",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3551,
+      "Y": 2377,
+      "Width": 343,
+      "Height": 232
+    },
+    "MapBounds": {
+      "X": 4688,
+      "Y": 965,
+      "Width": 343,
+      "Height": 232
+    },
+    "CenterX": 3726.3262,
+    "CenterY": 2496.9448,
+    "TerritoryType": 1,
+    "ID": 39,
+    "RegionName": "Western New York",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3347,
+      "Y": 1580,
+      "Width": 444,
+      "Height": 249
+    },
+    "MapBounds": {
+      "X": 4404,
+      "Y": 1817,
+      "Width": 444,
+      "Height": 249
+    },
+    "CenterX": 3571.2136,
+    "CenterY": 1712.859,
+    "TerritoryType": 2,
+    "ID": 40,
+    "RegionName": "Western North Carolina",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3428,
+      "Y": 3211,
+      "Width": 264,
+      "Height": 377
+    },
+    "MapBounds": {
+      "X": 4512,
+      "Y": 1367,
+      "Width": 264,
+      "Height": 377
+    },
+    "CenterX": 3557.2632,
+    "CenterY": 3433.6357,
+    "TerritoryType": 1,
+    "ID": 41,
+    "RegionName": "West Virginia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3428,
+      "Y": 3588,
+      "Width": 404,
+      "Height": 177
+    },
+    "MapBounds": {
+      "X": 4575,
+      "Y": 1580,
+      "Width": 404,
+      "Height": 177
+    },
+    "CenterX": 3659.6907,
+    "CenterY": 3675.4607,
+    "TerritoryType": 2,
+    "ID": 42,
+    "RegionName": "Western Virginia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3067,
+      "Y": 3486,
+      "Width": 346,
+      "Height": 268
+    },
+    "MapBounds": {
+      "X": 4409,
+      "Y": 2092,
+      "Width": 346,
+      "Height": 268
+    },
+    "CenterX": 3229.3076,
+    "CenterY": 3612.7068,
+    "TerritoryType": 2,
+    "ID": 43,
+    "RegionName": "Northeastern Georgia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 607,
+      "Y": 3603,
+      "Width": 402,
+      "Height": 145
+    },
+    "MapBounds": {
+      "X": 4791,
+      "Y": 1759,
+      "Width": 402,
+      "Height": 145
+    },
+    "CenterX": 823.39056,
+    "CenterY": 3681.1785,
+    "TerritoryType": 2,
+    "ID": 44,
+    "RegionName": "Northern North Carolina",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3347,
+      "Y": 1829,
+      "Width": 420,
+      "Height": 141
+    },
+    "MapBounds": {
+      "X": 4147,
+      "Y": 1757,
+      "Width": 420,
+      "Height": 141
+    },
+    "CenterX": 3536.7703,
+    "CenterY": 1899.8533,
+    "TerritoryType": 1,
+    "ID": 45,
+    "RegionName": "Southern Kentucky",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2828,
+      "Y": 3652,
+      "Width": 204,
+      "Height": 222
+    },
+    "MapBounds": {
+      "X": 3739,
+      "Y": 2576,
+      "Width": 204,
+      "Height": 222
+    },
+    "CenterX": 2916.608,
+    "CenterY": 3750.5632,
+    "TerritoryType": 2,
+    "ID": 46,
+    "RegionName": "Southern Louisiana",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3619,
+      "Y": 1981,
+      "Width": 272,
+      "Height": 184
+    },
+    "MapBounds": {
+      "X": 4863,
+      "Y": 1125,
+      "Width": 272,
+      "Height": 184
+    },
+    "CenterX": 3766.817,
+    "CenterY": 2085.1216,
+    "TerritoryType": 1,
+    "ID": 47,
+    "RegionName": "Northern Pennsylvanian Appalachia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3672,
+      "Y": 490,
+      "Width": 171,
+      "Height": 251
+    },
+    "MapBounds": {
+      "X": 4223,
+      "Y": 2297,
+      "Width": 171,
+      "Height": 251
+    },
+    "CenterX": 3758.7922,
+    "CenterY": 585.8457,
+    "TerritoryType": 2,
+    "ID": 48,
+    "RegionName": "Eastern Alabama",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1750,
+      "Y": 3559,
+      "Width": 157,
+      "Height": 292
+    },
+    "MapBounds": {
+      "X": 5148,
+      "Y": 708,
+      "Width": 157,
+      "Height": 292
+    },
+    "CenterX": 1827.4529,
+    "CenterY": 3683.1138,
+    "TerritoryType": 1,
+    "ID": 49,
+    "RegionName": "Vermont",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2828,
+      "Y": 3402,
+      "Width": 235,
+      "Height": 250
+    },
+    "MapBounds": {
+      "X": 4285,
+      "Y": 2051,
+      "Width": 235,
+      "Height": 250
+    },
+    "CenterX": 2924.361,
+    "CenterY": 3489.4216,
+    "TerritoryType": 2,
+    "ID": 50,
+    "RegionName": "Northern Georgia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1750,
+      "Y": 3243,
+      "Width": 164,
+      "Height": 316
+    },
+    "MapBounds": {
+      "X": 5267,
+      "Y": 669,
+      "Width": 164,
+      "Height": 316
+    },
+    "CenterX": 1809.2565,
+    "CenterY": 3431.804,
+    "TerritoryType": 1,
+    "ID": 51,
+    "RegionName": "New Hampshire",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2227,
+      "Y": 3699,
+      "Width": 232,
+      "Height": 189
+    },
+    "MapBounds": {
+      "X": 3931,
+      "Y": 1746,
+      "Width": 232,
+      "Height": 189
+    },
+    "CenterX": 2352.569,
+    "CenterY": 3799.7961,
+    "TerritoryType": 1,
+    "ID": 52,
+    "RegionName": "Western Kentucky",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3692,
+      "Y": 3211,
+      "Width": 186,
+      "Height": 189
+    },
+    "MapBounds": {
+      "X": 3856,
+      "Y": 1928,
+      "Width": 186,
+      "Height": 189
+    },
+    "CenterX": 3787.9736,
+    "CenterY": 3304.599,
+    "TerritoryType": 2,
+    "ID": 53,
+    "RegionName": "Western Tennessee",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3090,
+      "Y": 2254,
+      "Width": 378,
+      "Height": 115
+    },
+    "MapBounds": {
+      "X": 4066,
+      "Y": 1986,
+      "Width": 378,
+      "Height": 115
+    },
+    "CenterX": 3281.1394,
+    "CenterY": 2308.2651,
+    "TerritoryType": 2,
+    "ID": 54,
+    "RegionName": "Southern Tennessee",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1937,
+      "Y": 3699,
+      "Width": 290,
+      "Height": 160
+    },
+    "MapBounds": {
+      "X": 4136,
+      "Y": 2533,
+      "Width": 290,
+      "Height": 160
+    },
+    "CenterX": 2098.6934,
+    "CenterY": 3759.4878,
+    "TerritoryType": 2,
+    "ID": 55,
+    "RegionName": "West Florida",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1009,
+      "Y": 3603,
+      "Width": 164,
+      "Height": 266
+    },
+    "MapBounds": {
+      "X": 3737,
+      "Y": 2320,
+      "Width": 164,
+      "Height": 266
+    },
+    "CenterX": 1090.5645,
+    "CenterY": 3755.3481,
+    "TerritoryType": 2,
+    "ID": 56,
+    "RegionName": "Western Mississipi",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 0,
+      "Y": 3707,
+      "Width": 238,
+      "Height": 176
+    },
+    "MapBounds": {
+      "X": 4501,
+      "Y": 2006,
+      "Width": 238,
+      "Height": 176
+    },
+    "CenterX": 116.99528,
+    "CenterY": 3778.1997,
+    "TerritoryType": 2,
+    "ID": 57,
+    "RegionName": "Western South Carolina",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3619,
+      "Y": 2165,
+      "Width": 277,
+      "Height": 168
+    },
+    "MapBounds": {
+      "X": 5216,
+      "Y": 934,
+      "Width": 277,
+      "Height": 168
+    },
+    "CenterX": 3753.1262,
+    "CenterY": 2249.5688,
+    "TerritoryType": 1,
+    "ID": 58,
+    "RegionName": "Massachusetts",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2350,
+      "Y": 3478,
+      "Width": 184,
+      "Height": 192
+    },
+    "MapBounds": {
+      "X": 4713,
+      "Y": 1271,
+      "Width": 184,
+      "Height": 192
+    },
+    "CenterX": 2444.5173,
+    "CenterY": 3585.78,
+    "TerritoryType": 1,
+    "ID": 59,
+    "RegionName": "South Pennsylvania Appalachia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3164,
+      "Y": 2816,
+      "Width": 355,
+      "Height": 168
+    },
+    "MapBounds": {
+      "X": 4373,
+      "Y": 2214,
+      "Width": 355,
+      "Height": 168
+    },
+    "CenterX": 3315.7222,
+    "CenterY": 2894.488,
+    "TerritoryType": 2,
+    "ID": 60,
+    "RegionName": "Central Georgia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 1196,
+      "Y": 3720,
+      "Width": 218,
+      "Height": 174
+    },
+    "MapBounds": {
+      "X": 4890,
+      "Y": 1566,
+      "Width": 218,
+      "Height": 174
+    },
+    "CenterX": 1321.527,
+    "CenterY": 3790.8594,
+    "TerritoryType": 2,
+    "ID": 61,
+    "RegionName": "Eastern Virginia",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 2396,
+      "Y": 3060,
       "Width": 135,
-      "Height": 148
+      "Height": 212
+    },
+    "MapBounds": {
+      "X": 3768,
+      "Y": 2114,
+      "Width": 135,
+      "Height": 212
+    },
+    "CenterX": 2464.2979,
+    "CenterY": 3171.7168,
+    "TerritoryType": 2,
+    "ID": 62,
+    "RegionName": "Northern Mississippi",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3647,
+      "Y": 1179,
+      "Width": 202,
+      "Height": 243
+    },
+    "MapBounds": {
+      "X": 4622,
+      "Y": 2115,
+      "Width": 202,
+      "Height": 243
+    },
+    "CenterX": 3742.5115,
+    "CenterY": 1294.5126,
+    "TerritoryType": 2,
+    "ID": 63,
+    "RegionName": "Southern South Carolina",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 743,
+      "Y": 2751,
+      "Width": 284,
+      "Height": 75
+    },
+    "MapBounds": {
+      "X": 2659,
+      "Y": 1876,
+      "Width": 284,
+      "Height": 75
+    },
+    "CenterX": 881.2223,
+    "CenterY": 2785.585,
+    "TerritoryType": 0,
+    "ID": 64,
+    "RegionName": "Public Land Strip",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3672,
+      "Y": 741,
+      "Width": 180,
+      "Height": 131
+    },
+    "MapBounds": {
+      "X": 4985,
+      "Y": 1282,
+      "Width": 180,
+      "Height": 131
+    },
+    "CenterX": 3743.6375,
+    "CenterY": 780.99927,
+    "TerritoryType": 1,
+    "ID": 65,
+    "RegionName": "Pennsylvania",
+    "BitField": ""
+  },
+  {
+    "TextureSource": {
+      "X": 3712,
+      "Y": 872,
+      "Width": 143,
+      "Height": 156
     },
     "MapBounds": {
       "X": 4858,
       "Y": 1267,
-      "Width": 135,
-      "Height": 148
+      "Width": 143,
+      "Height": 156
     },
+    "CenterX": 3781.5903,
+    "CenterY": 955.1085,
     "TerritoryType": 1,
     "ID": 66,
-    "RegionName": "Fill This in",
+    "RegionName": "Central Pennsylvania Appalachia",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1768,
-      "Y": 3643,
-      "Width": 151,
-      "Height": 147
+      "X": 3692,
+      "Y": 3400,
+      "Width": 159,
+      "Height": 155
     },
     "MapBounds": {
       "X": 5219,
       "Y": 1051,
-      "Width": 151,
-      "Height": 147
+      "Width": 159,
+      "Height": 155
     },
+    "CenterX": 3763.6572,
+    "CenterY": 3461.6226,
     "TerritoryType": 1,
     "ID": 67,
-    "RegionName": "Fill This in",
+    "RegionName": "Connecticut",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1600,
-      "Y": 3643,
-      "Width": 168,
-      "Height": 149
+      "X": 3647,
+      "Y": 1422,
+      "Width": 176,
+      "Height": 157
     },
     "MapBounds": {
       "X": 5065,
       "Y": 1080,
-      "Width": 168,
-      "Height": 149
+      "Width": 176,
+      "Height": 157
     },
+    "CenterX": 3746.3887,
+    "CenterY": 1483.3215,
     "TerritoryType": 1,
     "ID": 68,
-    "RegionName": "Fill This in",
+    "RegionName": "New York City Metropolitan Area",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1073,
-      "Y": 2876,
-      "Width": 111,
-      "Height": 134
+      "X": 607,
+      "Y": 3748,
+      "Width": 119,
+      "Height": 142
     },
     "MapBounds": {
       "X": 5108,
       "Y": 1185,
-      "Width": 111,
-      "Height": 134
+      "Width": 119,
+      "Height": 142
     },
+    "CenterX": 662.5218,
+    "CenterY": 3818.4963,
     "TerritoryType": 1,
     "ID": 69,
-    "RegionName": "Fill This in",
+    "RegionName": "Northern New Jersey",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3455,
-      "Y": 2886,
-      "Width": 252,
-      "Height": 95
+      "X": 2982,
+      "Y": 1827,
+      "Width": 260,
+      "Height": 103
     },
     "MapBounds": {
       "X": 4725,
       "Y": 1515,
-      "Width": 252,
-      "Height": 95
+      "Width": 260,
+      "Height": 103
     },
+    "CenterX": 3073.43,
+    "CenterY": 1874.9764,
     "TerritoryType": 2,
     "ID": 70,
-    "RegionName": "Fill This in",
+    "RegionName": "Fredericksburg",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2638,
-      "Y": 964,
-      "Width": 118,
-      "Height": 137
+      "X": 1057,
+      "Y": 3368,
+      "Width": 126,
+      "Height": 145
     },
     "MapBounds": {
       "X": 5104,
       "Y": 1324,
-      "Width": 118,
-      "Height": 137
+      "Width": 126,
+      "Height": 145
     },
+    "CenterX": 1120.8096,
+    "CenterY": 3425.1995,
     "TerritoryType": 1,
     "ID": 71,
-    "RegionName": "Fill This in",
+    "RegionName": "Southern New Jersey",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 135,
-      "Y": 3664,
-      "Width": 141,
-      "Height": 107
+      "X": 3468,
+      "Y": 2254,
+      "Width": 149,
+      "Height": 115
     },
     "MapBounds": {
       "X": 4939,
       "Y": 1393,
-      "Width": 141,
-      "Height": 107
+      "Width": 149,
+      "Height": 115
     },
+    "CenterX": 3529.9426,
+    "CenterY": 2310.4563,
     "TerritoryType": 1,
     "ID": 72,
-    "RegionName": "Fill This in",
+    "RegionName": "Western Chesapeake Bay",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3004,
-      "Y": 3685,
-      "Width": 186,
-      "Height": 89
+      "X": 3551,
+      "Y": 2891,
+      "Width": 194,
+      "Height": 97
     },
     "MapBounds": {
       "X": 4776,
       "Y": 1468,
-      "Width": 186,
-      "Height": 89
+      "Width": 194,
+      "Height": 97
     },
+    "CenterX": 3646.9492,
+    "CenterY": 2931.89,
     "TerritoryType": 2,
     "ID": 73,
-    "RegionName": "Fill This in",
+    "RegionName": "The Wilderness",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2638,
-      "Y": 782,
-      "Width": 121,
-      "Height": 182
+      "X": 2396,
+      "Y": 3272,
+      "Width": 129,
+      "Height": 190
     },
     "MapBounds": {
       "X": 5053,
       "Y": 1412,
-      "Width": 121,
-      "Height": 182
+      "Width": 129,
+      "Height": 190
     },
+    "CenterX": 2446.2485,
+    "CenterY": 3380.5354,
     "TerritoryType": 1,
     "ID": 74,
-    "RegionName": "Fill This in",
+    "RegionName": "Eastern Chesapeake Bay",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2201,
-      "Width": 90,
-      "Height": 153
+      "X": 1090,
+      "Y": 2217,
+      "Width": 98,
+      "Height": 161
     },
     "MapBounds": {
       "X": 5084,
       "Y": 1373,
-      "Width": 90,
-      "Height": 153
+      "Width": 98,
+      "Height": 161
     },
+    "CenterX": 1130.9493,
+    "CenterY": 2313.2195,
     "TerritoryType": 1,
     "ID": 75,
-    "RegionName": "Fill This in",
+    "RegionName": "Delaware",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2354,
-      "Width": 78,
-      "Height": 104
+      "X": 1090,
+      "Y": 2378,
+      "Width": 86,
+      "Height": 112
     },
     "MapBounds": {
       "X": 3903,
       "Y": 2676,
-      "Width": 78,
-      "Height": 104
+      "Width": 86,
+      "Height": 112
     },
+    "CenterX": 1127.3774,
+    "CenterY": 2424.4736,
     "TerritoryType": 2,
     "ID": 76,
-    "RegionName": "Fill This in",
+    "RegionName": "New Orleans",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 3026,
-      "Y": 2476,
-      "Width": 165,
-      "Height": 98
+      "X": 3712,
+      "Y": 1028,
+      "Width": 173,
+      "Height": 106
     },
     "MapBounds": {
       "X": 5210,
       "Y": 1157,
-      "Width": 165,
-      "Height": 98
+      "Width": 173,
+      "Height": 106
     },
+    "CenterX": 3778.0674,
+    "CenterY": 1083.9894,
     "TerritoryType": 1,
     "ID": 77,
-    "RegionName": "Fill This in",
+    "RegionName": "Long Island",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2458,
-      "Width": 90,
-      "Height": 88
+      "X": 1090,
+      "Y": 2490,
+      "Width": 98,
+      "Height": 96
     },
     "MapBounds": {
       "X": 4981,
       "Y": 1500,
-      "Width": 90,
-      "Height": 88
+      "Width": 98,
+      "Height": 96
     },
+    "CenterX": 1132.2906,
+    "CenterY": 2533.9631,
     "TerritoryType": 1,
     "ID": 78,
-    "RegionName": "Fill This in",
+    "RegionName": "South Chesapeake Bay",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 593,
-      "Y": 2827,
-      "Width": 121,
-      "Height": 49
+      "X": 1057,
+      "Y": 3513,
+      "Width": 129,
+      "Height": 57
     },
     "MapBounds": {
       "X": 4821,
       "Y": 1436,
-      "Width": 121,
-      "Height": 49
+      "Width": 129,
+      "Height": 57
     },
+    "CenterX": 1123.6959,
+    "CenterY": 3540.5198,
     "TerritoryType": 2,
     "ID": 79,
-    "RegionName": "Fill This in",
+    "RegionName": "North Virginia",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2546,
-      "Width": 56,
-      "Height": 65
+      "X": 2661,
+      "Y": 1033,
+      "Width": 64,
+      "Height": 73
     },
     "MapBounds": {
       "X": 4722,
       "Y": 2339,
-      "Width": 56,
-      "Height": 65
+      "Width": 64,
+      "Height": 73
     },
+    "CenterX": 2689.1682,
+    "CenterY": 1064.0117,
     "TerritoryType": 2,
     "ID": 80,
-    "RegionName": "Fill This in",
+    "RegionName": "Savannah",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2638,
-      "Y": 1101,
-      "Width": 103,
-      "Height": 68
+      "X": 2661,
+      "Y": 957,
+      "Width": 111,
+      "Height": 76
     },
     "MapBounds": {
       "X": 4764,
       "Y": 1435,
-      "Width": 103,
-      "Height": 68
+      "Width": 111,
+      "Height": 76
     },
+    "CenterX": 2696.1597,
+    "CenterY": 984.4164,
     "TerritoryType": 1,
     "ID": 81,
-    "RegionName": "Fill This in",
+    "RegionName": "West Maryland",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2611,
-      "Width": 42,
-      "Height": 80
+      "X": 1131,
+      "Y": 2586,
+      "Width": 50,
+      "Height": 88
     },
     "MapBounds": {
       "X": 5361,
       "Y": 1043,
-      "Width": 42,
-      "Height": 80
+      "Width": 50,
+      "Height": 88
     },
+    "CenterX": 1152.6508,
+    "CenterY": 2624.072,
     "TerritoryType": 1,
     "ID": 82,
-    "RegionName": "Fill This in",
+    "RegionName": "Rhode Island",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1129,
-      "Y": 2736,
-      "Width": 58,
-      "Height": 37
+      "X": 1090,
+      "Y": 2768,
+      "Width": 66,
+      "Height": 45
     },
     "MapBounds": {
       "X": 4003,
       "Y": 2059,
-      "Width": 58,
-      "Height": 37
+      "Width": 66,
+      "Height": 45
     },
+    "CenterX": 1119.8331,
+    "CenterY": 2788.3567,
     "TerritoryType": 2,
     "ID": 83,
-    "RegionName": "Fill This in",
+    "RegionName": "Shiloh",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1138,
-      "Y": 2611,
-      "Width": 43,
-      "Height": 67
+      "X": 1090,
+      "Y": 2693,
+      "Width": 51,
+      "Height": 75
     },
     "MapBounds": {
       "X": 4948,
       "Y": 1495,
-      "Width": 43,
-      "Height": 67
+      "Width": 51,
+      "Height": 75
     },
+    "CenterX": 1110.3522,
+    "CenterY": 2721.3943,
     "TerritoryType": 2,
     "ID": 84,
-    "RegionName": "Fill This in",
+    "RegionName": "Manasses",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2691,
-      "Width": 33,
-      "Height": 99
+      "X": 1090,
+      "Y": 2586,
+      "Width": 41,
+      "Height": 107
     },
     "MapBounds": {
       "X": 5121,
       "Y": 1581,
-      "Width": 33,
-      "Height": 99
+      "Width": 41,
+      "Height": 107
     },
+    "CenterX": 1104.1978,
+    "CenterY": 2629.1702,
     "TerritoryType": 1,
     "ID": 85,
-    "RegionName": "Fill This in",
+    "RegionName": "Accomack",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1129,
-      "Y": 2691,
-      "Width": 55,
-      "Height": 45
+      "X": 2661,
+      "Y": 1106,
+      "Width": 63,
+      "Height": 53
     },
     "MapBounds": {
       "X": 4886,
       "Y": 1423,
-      "Width": 55,
-      "Height": 45
+      "Width": 63,
+      "Height": 53
     },
+    "CenterX": 2695.61,
+    "CenterY": 1119.5795,
     "TerritoryType": 1,
     "ID": 86,
-    "RegionName": "Fill This in",
+    "RegionName": "Antietam",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 714,
-      "Y": 2827,
-      "Width": 32,
-      "Height": 35
+      "X": 1027,
+      "Y": 2751,
+      "Width": 40,
+      "Height": 43
     },
     "MapBounds": {
       "X": 4240,
       "Y": 2399,
-      "Width": 32,
-      "Height": 35
+      "Width": 40,
+      "Height": 43
     },
+    "CenterX": 1041.6779,
+    "CenterY": 2768.3787,
     "TerritoryType": 2,
     "ID": 87,
-    "RegionName": "Fill This in",
+    "RegionName": "Montgomery",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1135,
-      "Y": 2790,
-      "Width": 32,
-      "Height": 38
+      "X": 2725,
+      "Y": 1033,
+      "Width": 40,
+      "Height": 46
     },
     "MapBounds": {
       "X": 4971,
       "Y": 1672,
-      "Width": 32,
-      "Height": 38
+      "Width": 40,
+      "Height": 46
     },
+    "CenterX": 2740.2417,
+    "CenterY": 1053.3124,
     "TerritoryType": 2,
     "ID": 88,
-    "RegionName": "Fill This in",
+    "RegionName": "Richmond",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1152,
-      "Y": 2546,
-      "Width": 36,
-      "Height": 34
+      "X": 2724,
+      "Y": 1106,
+      "Width": 44,
+      "Height": 42
     },
     "MapBounds": {
       "X": 4390,
       "Y": 2189,
-      "Width": 36,
-      "Height": 34
+      "Width": 44,
+      "Height": 42
     },
+    "CenterX": 2741.135,
+    "CenterY": 1124.0516,
     "TerritoryType": 2,
     "ID": 89,
-    "RegionName": "Fill This in",
+    "RegionName": "Atlanta",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1096,
-      "Y": 2790,
-      "Width": 39,
-      "Height": 39
+      "X": 1141,
+      "Y": 2693,
+      "Width": 47,
+      "Height": 47
     },
     "MapBounds": {
       "X": 3778,
       "Y": 2410,
-      "Width": 39,
-      "Height": 39
+      "Width": 47,
+      "Height": 47
     },
+    "CenterX": 1165.3636,
+    "CenterY": 2712.3123,
     "TerritoryType": 2,
     "ID": 90,
-    "RegionName": "Fill This in",
+    "RegionName": "Vicksburg",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 746,
-      "Y": 2827,
-      "Width": 44,
-      "Height": 18
+      "X": 2490,
+      "Y": 1953,
+      "Width": 52,
+      "Height": 26
     },
     "MapBounds": {
       "X": 4883,
       "Y": 1407,
-      "Width": 44,
-      "Height": 18
+      "Width": 52,
+      "Height": 26
     },
+    "CenterX": 2512.003,
+    "CenterY": 1962.5515,
     "TerritoryType": 1,
     "ID": 91,
-    "RegionName": "Fill This in",
+    "RegionName": "South Gettysburg",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 2741,
-      "Y": 1101,
-      "Width": 20,
-      "Height": 19
+      "X": 2574,
+      "Y": 1953,
+      "Width": 28,
+      "Height": 27
     },
     "MapBounds": {
       "X": 4982,
       "Y": 1497,
-      "Width": 20,
-      "Height": 19
+      "Width": 28,
+      "Height": 27
     },
+    "CenterX": 2583.3884,
+    "CenterY": 1962.5979,
     "TerritoryType": 1,
     "ID": 92,
-    "RegionName": "Fill This in",
+    "RegionName": "Washington D.C",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1152,
-      "Y": 2580,
-      "Width": 24,
-      "Height": 18
+      "X": 2542,
+      "Y": 1953,
+      "Width": 32,
+      "Height": 26
     },
     "MapBounds": {
       "X": 5103,
       "Y": 1351,
-      "Width": 24,
-      "Height": 18
+      "Width": 32,
+      "Height": 26
     },
+    "CenterX": 2551.8877,
+    "CenterY": 1960.3334,
     "TerritoryType": 1,
     "ID": 93,
-    "RegionName": "Fill This in",
+    "RegionName": "Philidelphia",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1152,
-      "Y": 2598,
-      "Width": 27,
-      "Height": 13
+      "X": 1501,
+      "Y": 1156,
+      "Width": 35,
+      "Height": 21
     },
     "MapBounds": {
       "X": 4198,
       "Y": 2281,
-      "Width": 27,
-      "Height": 13
+      "Width": 35,
+      "Height": 21
     },
+    "CenterX": 1514.6962,
+    "CenterY": 1163.1266,
     "TerritoryType": 2,
     "ID": 94,
-    "RegionName": "Fill This in",
+    "RegionName": "Birmingham",
     "BitField": ""
   },
   {
     "TextureSource": {
-      "X": 1174,
-      "Y": 2354,
-      "Width": 14,
-      "Height": 9
+      "X": 1536,
+      "Y": 1156,
+      "Width": 22,
+      "Height": 17
     },
     "MapBounds": {
       "X": 4890,
       "Y": 1400,
-      "Width": 14,
-      "Height": 9
+      "Width": 22,
+      "Height": 17
     },
+    "CenterX": 1542.8468,
+    "CenterY": 1160.3153,
     "TerritoryType": 1,
     "ID": 95,
-    "RegionName": "Fill This in",
+    "RegionName": "Gettysburg",
     "BitField": ""
   }
 ]

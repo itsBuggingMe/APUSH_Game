@@ -13,6 +13,12 @@ namespace APUSH_Game.Helpers
     /// </summary>
     internal static class Globals
     {
+        public const float ForegroundText = 0.3f;
+        public const float ForegroundLayer = 0.4f;
+        public const float TerritoryLayer = 0.5f;
+        public const float TextLayer = 0.8f;
+        public const float BackGroundLayer = 0.9f;
+
         /// <summary>
         /// Reference to the current camera
         /// </summary>
@@ -59,6 +65,8 @@ namespace APUSH_Game.Helpers
         public static float Scale { get; private set; }
         public static Vector2 ScaleVec { get; private set; }
 
+        public static Texture2D Pixel { get; private set; }
+
         /// <summary>
         /// Initializes global variables and settings.
         /// </summary>
@@ -77,6 +85,9 @@ namespace APUSH_Game.Helpers
             ScaleVec = WindowSize.V() / DefaultSize;
             WindowSizeEvent += (p) => Scale = p.V().Length() / DefaultSize.Length();
             WindowSizeEvent += (p) => ScaleVec = p.V() / DefaultSize;
+
+            Pixel = new Texture2D(game.GraphicsDevice, 1, 1);
+            Pixel.SetData(new Color[] { Color.White });
         }
 
         public static void Update(GameTime gameTime)
@@ -86,16 +97,7 @@ namespace APUSH_Game.Helpers
 
         public static void LoadFont(string path)
         {
-
-        }
-
-        /// <summary>
-        /// Use sparingly
-        /// Does string concat each time
-        /// </summary>
-        public static Texture2D GetTexture(string name)
-        {
-            return GameRoot.Game.Content.Load<Texture2D>(Path.Combine("textures", name));
+            Font = GameRoot.Game.Content.Load<SpriteFont>(path);
         }
     }
 }

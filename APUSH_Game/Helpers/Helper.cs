@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace APUSH_Game.Helpers
 {
-    internal static class Helper
+    public static class Helper
     {
         public static Rectangle RectangleFromCenterSize(Point center, Point size)
         {
             return new Rectangle(center - new Point(size.X / 2, size.Y / 2), size);
+        }
+        public static Rectangle RectangleFromCenterSize(Vector2 center, Vector2 size)
+        {
+            return new Rectangle((center - new Vector2(size.X / 2, size.Y / 2)).ToPoint(), size.ToPoint());
         }
 
         public static float Normailize(float max, float min, float value)
@@ -262,6 +266,12 @@ namespace APUSH_Game.Helpers
         public static float TaxicabDistance(Vector2 A, Vector2 B)
         {
             return Math.Abs(A.X - B.X) + Math.Abs(A.Y - B.Y);
+        }
+
+        public static void DrawStringCentered(this SpriteBatch sb, string text, Vector2 location, float size = 1, Color? color = null)
+        {
+            Vector2 measuredSize = Globals.Font.MeasureString(text) * size;
+            sb.DrawString(Globals.Font, text, location - measuredSize * 0.5f, color ?? Color.Black, 0, Vector2.Zero, size, SpriteEffects.None, Globals.TextLayer);
         }
     }
 

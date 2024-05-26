@@ -8,8 +8,9 @@ namespace APUSH_Game.GameState
 {
     internal interface IComponent
     {
-        public abstract void Initalize(GameWorld world, EntityManager manager, int thisEntityId);
-        public abstract void Update(GameTime gameTime);
+        public object Tag { get; set; }
+        public void Initalize(GameWorld world, EntityManager manager, int thisEntityId) { }
+        public void Update(GameTime gameTime) { }
     }
 
     internal interface IDrawComponent : IComponent
