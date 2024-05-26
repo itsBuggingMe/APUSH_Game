@@ -5,6 +5,7 @@ namespace APUSH_Game.GameState
 {
     internal class PromptBox : IGameObject
     {
+        public bool Delete { get; set; }
         public const int GridSize = 64;
         public object Tag { get; set; }
 
@@ -89,7 +90,7 @@ namespace APUSH_Game.GameState
 
         private void DoDraw(GameTime gt)
         {
-            Rectangle bounds = _promptBox.PromptBounds;
+            var bounds = PromptBounds;
 
             Rectangle topLeft = new Rectangle(bounds.X, bounds.Y, GridSize, GridSize);
             int topCount = bounds.Width / GridSize;
@@ -121,7 +122,6 @@ namespace APUSH_Game.GameState
             screen.Offset(offsetX, offsetY);
         }
 
-        private PromptBox _promptBox;
         private Texture2D _bg;
         private Rectangle Corner = new Rectangle(0, 0, GridSize, GridSize);
         private Rectangle HSide = new Rectangle(128, 0, GridSize, GridSize);

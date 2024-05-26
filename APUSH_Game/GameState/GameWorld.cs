@@ -15,6 +15,7 @@ namespace APUSH_Game.GameState
         private readonly Region[] _regions;
         private readonly GameCamera gameCamera;
         public GameCamera Camera => gameCamera;
+        private GameGUI _hud;
 
         private readonly Texture2D _bg;
         private readonly Texture2D _pk;
@@ -38,6 +39,8 @@ namespace APUSH_Game.GameState
             {
                 GameObjects.Add(new RegionObject(_regions[i], this));
             }
+
+            _hud = new GameGUI();
         }
 
         private Vector2 cameraVelocity = Vector2.Zero;
@@ -55,6 +58,7 @@ namespace APUSH_Game.GameState
             {
                 GameObjects[i].Update();
             }
+            _hud.Tick(Gametime);
 
             Vector2 accel = Vector2.Zero;
             if (InputHelper.Down(Keys.W))
@@ -90,10 +94,13 @@ namespace APUSH_Game.GameState
             for (int i = GameObjects.Count - 1; i >= 0; i--)
             {
                 GameObjects[i].Draw();
+                if (GameObjects[i].Delete)
+                    GameObjects.RemoveAt(i);
             }
             Globals.SpriteBatch.End();
             
             Globals.SpriteBatch.Begin();
+            _hud.Draw(Gametime);
             GameRoot.Game.PostDraw?.Invoke(Gametime);
             GameRoot.Game.PostDraw = null;
             Globals.SpriteBatch.End();

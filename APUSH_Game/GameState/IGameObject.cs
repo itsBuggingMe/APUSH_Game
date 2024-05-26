@@ -10,5 +10,6 @@ namespace APUSH_Game.GameState
     {
         void Update();
         void Draw();
+        public bool Delete { get; }
     }
 }

@@ -11,6 +11,7 @@ namespace APUSH_Game.GameState
 {
     internal class RegionObject : IGameObject
     {
+        public bool Delete => false;
         public RegionObject(Region r, GameWorld world)
         {
             _texture = GameRoot.Game.Content.Load<Texture2D>("Packed");
