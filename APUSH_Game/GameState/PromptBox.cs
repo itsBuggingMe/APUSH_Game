@@ -3,7 +3,7 @@ using static APUSH_Game.GameState.PromptBox;
 
 namespace APUSH_Game.GameState
 {
-    internal class PromptBox : IText
+    internal class PromptBox : IGameObject
     {
         public const int GridSize = 64;
         public object Tag { get; set; }
@@ -30,6 +30,9 @@ namespace APUSH_Game.GameState
             _prompt = text;
             _windowPortion = windowPortion;
             CalcuatePromptBounds();
+
+            _bg = GameRoot.Game.Content.Load<Texture2D>("DialogeBorder");
+
             //memory leak but i dont have time to fix
             Globals.WindowSizeEvent += p => CalcuatePromptBounds();
         }
@@ -50,7 +53,7 @@ namespace APUSH_Game.GameState
         private float offsetVelocity;
         private Point offset;
 
-        public void Update(GameTime gameTime)
+        public void Update()
         {
             IsMouseOver = _promptBoundStatic.Contains(InputHelper.MouseLocation);
 
@@ -70,25 +73,10 @@ namespace APUSH_Game.GameState
 
             PromptBounds = _promptBoundStatic.OffsetCopy(offset);
         }
-    }
 
-    internal class PromptBoxDrawer : IDrawComponent
-    {
-        public object Tag { get; set; }
-
-        private PromptBox _promptBox;
-        private Texture2D _bg;
-        private Rectangle Corner = new Rectangle(0,0, GridSize, GridSize);
-        private Rectangle HSide = new Rectangle(128, 0, GridSize, GridSize);
-        private Rectangle VSide = new Rectangle(2 * 128, 0, GridSize, GridSize);
-        public void Initalize(GameWorld world, EntityManager manager, int thisEntityId)
+        public void Draw()
         {
-            _promptBox = manager.GetOrThrow<PromptBox>(thisEntityId);
-            _bg = GameRoot.Game.Content.Load<Texture2D>("DialogeBorder");
-        }
-        public void Update(GameTime gameTime)
-        {
-            if(Globals.TotalFrames % 15 == 0)
+            if (Globals.TotalFrames % 15 == 0)
             {
                 int y = (Corner.Y + 128) % (3 * 128);
                 Corner.Y = y;
@@ -96,9 +84,10 @@ namespace APUSH_Game.GameState
                 VSide.Y = y;
             }
 
-            GameRoot.Game.PostDraw += Draw;
+            GameRoot.Game.PostDraw += DoDraw;
         }
-        private void Draw(GameTime gameTime)
+
+        private void DoDraw(GameTime gt)
         {
             Rectangle bounds = _promptBox.PromptBounds;
 
@@ -131,5 +120,11 @@ namespace APUSH_Game.GameState
             Globals.SpriteBatch.Draw(_bg, screen, source, Color.White, default, default, se, 0);
             screen.Offset(offsetX, offsetY);
         }
+
+        private PromptBox _promptBox;
+        private Texture2D _bg;
+        private Rectangle Corner = new Rectangle(0, 0, GridSize, GridSize);
+        private Rectangle HSide = new Rectangle(128, 0, GridSize, GridSize);
+        private Rectangle VSide = new Rectangle(2 * 128, 0, GridSize, GridSize);
     }
 }

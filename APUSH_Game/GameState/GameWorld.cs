@@ -12,7 +12,6 @@ namespace APUSH_Game.GameState
 {
     internal class GameWorld
     {
-        private readonly EntityManager _em;
         private readonly Region[] _regions;
         private readonly GameCamera gameCamera;
         public GameCamera Camera => gameCamera;
@@ -20,6 +19,8 @@ namespace APUSH_Game.GameState
         private readonly Texture2D _bg;
         private readonly Texture2D _pk;
         private readonly Color[] colors;
+
+        private readonly List<IGameObject> GameObjects = new List<IGameObject>();
 
         public GameWorld()
         {
@@ -32,11 +33,10 @@ namespace APUSH_Game.GameState
             colors = new Color[_pk.Width * _pk.Height];
             _pk.GetData(colors);
 
-            _em = new(this);
             _regions = JsonConvert.DeserializeObject<Region[]>(File.ReadAllText("terr.json"));
             for(int i = 0; i < _regions.Length; i++)
             {
-                _em.AddEntity(new RegionData(_regions[i]), new RegionDrawer(), new TextDrawer());
+                GameObjects.Add(new RegionObject(_regions[i], this));
             }
         }
 
@@ -51,7 +51,10 @@ namespace APUSH_Game.GameState
 
         public void Tick(GameTime Gametime)
         {   
-            _em.Update(Gametime);
+            for(int i = GameObjects.Count - 1; i >= 0; i--)
+            {
+                GameObjects[i].Update();
+            }
 
             Vector2 accel = Vector2.Zero;
             if (InputHelper.Down(Keys.W))
@@ -84,7 +87,10 @@ namespace APUSH_Game.GameState
             
             gameCamera.StartSpriteBatch(Globals.SpriteBatch);
             Globals.SpriteBatch.Draw(_bg, Vector2.Zero, Color.White);
-            _em.Draw(Gametime);
+            for (int i = GameObjects.Count - 1; i >= 0; i--)
+            {
+                GameObjects[i].Draw();
+            }
             Globals.SpriteBatch.End();
             
             Globals.SpriteBatch.Begin();
@@ -103,6 +109,8 @@ namespace APUSH_Game.GameState
 
         public void AskQuestion(string question, int correctIndex, params string[] responses)
         {
+            throw new NotImplementedException();
+            /*
             int mainbox = _em.AddEntity(new PromptBox(question, new Vector2(0.5f, 0.38f), false, null, 0.8f), new PromptBoxDrawer(), new TextDrawer());
             PromptBox p = _em.GetOrThrow<PromptBox>(mainbox);
 
@@ -123,7 +131,7 @@ namespace APUSH_Game.GameState
                 {
                     _em.RemoveEntity(ids[i]);
                 }
-            }
+            }*/
         }
     }
 }

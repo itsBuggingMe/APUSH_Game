@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace APUSH_Game
 {
-    internal class Troop : IUpdateComponent, IPosition
+    internal class Troop
     {
-        public object Tag { get; set; }
-
         public Vector2 Position { get; set; }
 
         public Troop(Vector2 position)
