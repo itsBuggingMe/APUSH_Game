@@ -105,7 +105,7 @@ namespace APUSH_Game.GameState
             var location = new Vector2(
                 Helper.ApproximateNormal(regionObject.Position.X, _hoverDistance),
                 Helper.ApproximateNormal(regionObject.Position.Y, _hoverDistance)
-                );sss
+                );
 
             if(!regionObject.IsInTerritory(location.ToPoint()))
             {
