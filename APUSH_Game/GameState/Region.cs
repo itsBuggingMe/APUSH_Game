@@ -25,7 +25,7 @@ namespace APUSH_Game.GameState
 
         public Troop CurrentTroops { get; set; }
 
-        public bool IsSelected { get; private set; }
+        public bool IsSelected { get;  set; }
         public bool MouseOver { get; private set; }
         public bool LightUp { get; set; }
         public Vector2 Position { get; private set; }
@@ -33,16 +33,6 @@ namespace APUSH_Game.GameState
         private GameWorld world;
         private float _size;
         public readonly int ID;
-
-        public void AddTroop(int amt)
-        {
-
-        }
-
-        public void RemoveTroops(int amt)
-        {
-
-        }
 
         public TerrioryType Type
         {
@@ -56,12 +46,7 @@ namespace APUSH_Game.GameState
 
         public void Update()
         {
-            if (!world.State.AllowSelect(this))
-            {
-                IsSelected = MouseOver = false;
-                return;
-            }
-
+            LightUp = world.State.IsPotenialSelection(this);
             Point worldMousePos = world.Camera.ScreenToWorld(InputHelper.MouseLocation.ToVector2()).ToPoint();
             MouseOver = IsInTerritory(worldMousePos);
 
@@ -69,13 +54,11 @@ namespace APUSH_Game.GameState
             {
                 if(IsSelected)
                 {
-                    IsSelected = false;
-                    world.State.RegionDeselected(this);
+                    IsSelected = !world.State.TryRegionDeselected(this);
                 }
                 else if(MouseOver)
                 {
-                    IsSelected = true;
-                    world.State.RegionSelected(this);
+                    IsSelected = world.State.TryRegionSelected(this);
                 }
             }
         }
@@ -88,37 +71,21 @@ namespace APUSH_Game.GameState
 
         public void Draw()
         {
-            if(LightUp)
-            {
+            if (IsSelected)
+                DrawOffset();
+            else if (LightUp)
                 DrawLight();
-            }
             else
-                if (MouseOver)
-                {
-                    if (InputHelper.Down(MouseButton.Left))
-                    {
-                        DrawLight();
-                    }
-                    else
-                    {
-                        DrawOffset();
-                    }
-                }
-                else if(IsSelected)
-                {
-                    DrawOffset();
-                }
-                else
-                {
-                    DrawNormal();
-                }
+                DrawNormal();
 
             //draw text
             Color textColor = (MouseOver || IsSelected) ? Color.White : (Color.White * (_size > 0.2f ? 1 - TransparencyFunction(world.Camera.Zoom) : TransparencyFunction(world.Camera.Zoom)));
-            Globals.SpriteBatch.DrawStringCentered(Data.RegionName, 
-                Data.MapBounds.Location.V() +  
-                new Vector2(Data.CenterX, Data.CenterY) - 
-                Data.TextureSource.Location.V(), _size, textColor, Depth.TextWorld);
+            Vector2 loc = Data.MapBounds.Location.V() +
+                new Vector2(Data.CenterX, Data.CenterY) -
+                Data.TextureSource.Location.V();
+
+            Globals.SpriteBatch.DrawStringCentered(CurrentTroops.TroopCount.ToString(), loc, 0.2f, color:Color.White ,layer: Depth.TextWorld);
+            Globals.SpriteBatch.DrawStringCentered(Data.RegionName, loc + Vector2.UnitY * 30, _size, textColor, Depth.TextWorld);
 
 
             void DrawNormal()
@@ -170,11 +137,6 @@ namespace APUSH_Game.GameState
                     SpriteEffects.None,
                     Depth.Territory + Depth.Epsilon);
             }
-        }
-
-        public void ReportDeselect()
-        {
-            IsSelected = false;
         }
 
         public override string ToString()

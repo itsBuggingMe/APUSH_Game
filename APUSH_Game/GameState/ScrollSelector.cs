@@ -27,7 +27,7 @@ namespace APUSH_Game.GameState
             this.max = max;
         }
 
-        public bool Delete { get; private set; }
+        public bool Delete { get; set; }
 
         public void Update()
         {
@@ -48,7 +48,7 @@ namespace APUSH_Game.GameState
                 current += (closest - current) * 0.05f;
             }
 
-            if(InputHelper.RisingEdge(Keys.Enter))
+            if(InputHelper.RisingEdge(Keys.Enter) || InputHelper.RisingEdge(MouseButton.Left))
             {
                 whenSelected?.Invoke((int)Math.Round(current));
                 Delete = true;

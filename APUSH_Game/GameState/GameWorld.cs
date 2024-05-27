@@ -21,6 +21,7 @@ namespace APUSH_Game.GameState
         public bool Current { get; set; }
         private bool _activeTransition = false;
         private GameGUI _currentRef;
+        public GameGUI CurrentGameGUI => _currentRef;
 
         private readonly Texture2D _bg;
         private readonly Texture2D _pk;
@@ -109,7 +110,7 @@ namespace APUSH_Game.GameState
             }
             _currentRef.Tick(Gametime);
 
-            if(InputHelper.RisingEdge(Keys.Space) && !_activeTransition)
+            if((_currentRef.NumPoliticalCapital <= 0 )&& !_activeTransition)
             {
                 _activeTransition = true;
                 _currentRef.AnimateOut().SetOnEnd(()=>
