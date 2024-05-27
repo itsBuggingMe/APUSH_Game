@@ -85,7 +85,7 @@ namespace APUSH_Game.Interface
             LeftPanel = AddElement(new GuiBase());
             RightPanel = AddElement(new GuiBase());
 
-            moneyText = LeftPanel.AddElement(new TextElement(new Vector2(120, 105), "0", Color.Black, 0.7f, ElementAlign.LeftMiddle));
+            moneyText = LeftPanel.AddElement(new TextElement(new Vector2(120, 105), "100", Color.Black, 0.7f, ElementAlign.LeftMiddle));
             LeftPanel.AddElement(new Image(new Vector2(70, 100), Color.Black, new Vector2(0.3f), ElementAlign.Center, "MoneySymbol"));
 
             for(int i = 0; i < Troop.Sources.Length; i++)
