@@ -252,7 +252,18 @@ namespace APUSH_Game.Helpers
                 (random ?? Random.Shared).NextSingle(bounds.Top + inset, bounds.Bottom - inset)
                 );
         }
+        public static float ApproximateNormal(float mean, float stdDev)
+        {
+            float u1 = 1.0f - Random.Shared.NextSingle();
+            float u2 = 1.0f - Random.Shared.NextSingle();
 
+            float randStdNormal = MathF.Sqrt(-2.0f * MathF.Log(u1)) *
+                         MathF.Sin(2.0f * MathF.PI * u2);
+            float randNormal =
+                         mean + stdDev * randStdNormal;
+
+            return randNormal;
+        }
         public static Rectangle OffsetCopy(this Rectangle rectangle, Point Amount)
         {
             return new Rectangle(rectangle.Location + Amount, rectangle.Size);
@@ -268,10 +279,10 @@ namespace APUSH_Game.Helpers
             return Math.Abs(A.X - B.X) + Math.Abs(A.Y - B.Y);
         }
 
-        public static void DrawStringCentered(this SpriteBatch sb, string text, Vector2 location, float size = 1, Color? color = null)
+        public static void DrawStringCentered(this SpriteBatch sb, string text, Vector2 location, float size = 1, Color? color = null, float? layer = null)
         {
             Vector2 measuredSize = Globals.Font.MeasureString(text) * size;
-            sb.DrawString(Globals.Font, text, location - measuredSize * 0.5f, color ?? Color.Black, 0, Vector2.Zero, size, SpriteEffects.None, Globals.TextLayer);
+            sb.DrawString(Globals.Font, text, location - measuredSize * 0.5f, color ?? Color.Black, 0, Vector2.Zero, size, SpriteEffects.None, layer ?? Depth.TextWorld);
         }
     }
 

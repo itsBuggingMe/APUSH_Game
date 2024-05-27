@@ -13,12 +13,6 @@ namespace APUSH_Game.Helpers
     /// </summary>
     internal static class Globals
     {
-        public const float ForegroundText = 0.3f;
-        public const float ForegroundLayer = 0.4f;
-        public const float TerritoryLayer = 0.5f;
-        public const float TextLayer = 0.8f;
-        public const float BackGroundLayer = 0.9f;
-
         /// <summary>
         /// Reference to the current camera
         /// </summary>

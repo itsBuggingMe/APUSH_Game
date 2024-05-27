@@ -56,6 +56,7 @@ namespace APUSH_Game
                 ToggleBorderless();
 
             ScreenManager.Instance.Tick(gameTime);
+            AnimationPool.Instance.Update(gameTime);
 
             base.Update(gameTime);
         }

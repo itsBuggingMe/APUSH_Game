@@ -36,7 +36,7 @@ namespace APUSH_Game.Interface.Elements
 
         public override void Draw(GameTime gameTime)
         {
-            Vector2 offset = _cachedSize * Size * _alignment;
+            Vector2 offset = _cachedSize * Size * _alignment * ScaleVector;
             Globals.SpriteBatch.DrawString(
                 Globals.Font, 
                 _text,
@@ -44,9 +44,9 @@ namespace APUSH_Game.Interface.Elements
                 Color, 
                 0, 
                 Vector2.Zero, 
-                Size, 
+                Size * ScaleVector, 
                 SpriteEffects.None, 
-                Globals.ForegroundText);
+                0);
             
             base.Draw(gameTime);
         }

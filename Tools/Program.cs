@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using APUSH_Game.GameState;
 using System.Drawing;
 using FastBitmapLib;
+using APUSH_Game.Helpers;
 
 namespace Tools
 {
@@ -15,6 +16,49 @@ namespace Tools
     {
         public static void Main(string[] args)
         {
+            const int thickAmt = 4;
+            Vector2[] vectors = Enumerable.Range(0, 8).Select(i => Helper.RotateVector(Vector2.UnitX * thickAmt, i * 45) + Vector2.One * thickAmt).ToArray();
+
+            const string path = "C:\\Users\\Jason\\source\\repos\\APUSH_Game\\APUSH_Game\\Content\\PCicon - Copy.png";
+            const string paths = "C:\\Users\\Jason\\source\\repos\\APUSH_Game\\APUSH_Game\\Content\\PCicon.png";
+            Bitmap bmp = new Bitmap(path);
+
+            Bitmap final = new Bitmap(bmp.Width + 2 * thickAmt, bmp.Height + 2 * thickAmt);
+            using (var g = Graphics.FromImage(final))
+            {
+                for(int i = 0; i < vectors.Length; i++)
+                {
+                    g.DrawImage(bmp, new PointF(vectors[i].X, vectors[i].Y));
+                }
+            }
+
+            FastBitmap fast = new FastBitmap(final);
+            fast.Lock();
+            fast.ModPixel(c => Color.FromArgb(c.A, 255, 255, 255));
+            fast.Unlock();
+            final.Save(paths);
+            /*
+            //passes
+
+            const string dir = "C:\\Users\\Jason\\source\\repos\\APUSH_Game\\Tools";
+            foreach (var (i, minfo) in typeof(MapProcessor).GetMethods().Where(mi => mi.IsStatic && mi.IsPublic).Select((i, j) => (j + 1, i)))
+            {
+                string potPath = Path.Combine(dir, $"MapV{i + 1}.png");
+                if (!File.Exists(potPath))
+                {
+                    Bitmap bmp = new Bitmap(Path.Combine(dir, $"MapV{i}.png"));
+                    FastBitmap fastBitmap = new FastBitmap(bmp);
+                    fastBitmap.Lock();
+                    minfo.Invoke(null, new object[] { fastBitmap });
+                    fastBitmap.Unlock();
+                    bmp.Save(potPath);
+                }
+
+                Console.WriteLine($"Done {i}");
+            }*/
+
+                return;
+            /*
             File.WriteAllText("questions.json", JsonConvert.SerializeObject(Enumerable.Range(0, 25).Select(c => new Question()).ToArray()));
 
 
@@ -50,7 +94,7 @@ namespace Tools
                 }
 
                 File.WriteAllText("terr.json", JsonConvert.SerializeObject(regions.ToArray()));
-            }
+            }*/
 
             /*
             //bitfields
@@ -97,26 +141,7 @@ namespace Tools
                 });
             }
             File.WriteAllText("terr.json", JsonConvert.SerializeObject(regions.ToArray()));
-            
-
-            //passes
-            /*
-            const string dir = "C:\\Users\\Jason\\source\\repos\\APUSH_Game\\Tools";
-            foreach (var (i, minfo) in typeof(MapProcessor).GetMethods().Where(mi => mi.IsStatic && mi.IsPublic).Select((i, j) => (j + 1, i)))
-            {
-                string potPath = Path.Combine(dir, $"MapV{i + 1}.png");
-                if (!File.Exists(potPath))
-                {
-                    Bitmap bmp = new Bitmap(Path.Combine(dir, $"MapV{i}.png"));
-                    FastBitmap fastBitmap = new FastBitmap(bmp);
-                    fastBitmap.Lock();
-                    minfo.Invoke(null, new object[] { fastBitmap });
-                    fastBitmap.Unlock();
-                    bmp.Save(potPath);
-                }
-
-                Console.WriteLine($"Done {i}");
-            }*/
+           
         }
 
         public static IEnumerable<byte> ToBytes(this BitArray bits, bool MSB = false)

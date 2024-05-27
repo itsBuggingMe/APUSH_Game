@@ -12,16 +12,24 @@ namespace APUSH_Game.GameState
 {
     internal class GameWorld
     {
-        private readonly Region[] _regions;
+        private readonly RegionObject[] _regions;
         private readonly GameCamera gameCamera;
         public GameCamera Camera => gameCamera;
-        private GameGUI _hud;
+
+        private GameGUI _union;
+        private GameGUI _confederacy;
+        public bool Current { get; set; }
+        private bool _activeTransition = false;
+        private GameGUI _currentRef;
 
         private readonly Texture2D _bg;
         private readonly Texture2D _pk;
         private readonly Color[] colors;
+        public TurnAction SelectedAction => _currentRef.CurrentAction;
+        public readonly List<IGameObject> GameObjects = new List<IGameObject>();
 
-        private readonly List<IGameObject> GameObjects = new List<IGameObject>();
+        public bool ScrollLock { get; set; } = false;
+        public StateManager State { get; private init; }
 
         public GameWorld()
         {
@@ -34,13 +42,25 @@ namespace APUSH_Game.GameState
             colors = new Color[_pk.Width * _pk.Height];
             _pk.GetData(colors);
 
-            _regions = JsonConvert.DeserializeObject<Region[]>(File.ReadAllText("terr.json"));
+            var data = JsonConvert.DeserializeObject<Region[]>(File.ReadAllText("terr.json"));
+            _regions = new RegionObject[data.Length];
+            for(int i = 0; i < data.Length; i++)
+            {
+                GameObjects.Add(_regions[i] = new RegionObject(data[i], this, i, Random.Shared.Next(8)));
+            }
+            State = new StateManager(_regions, this);
+            _currentRef = _union = new GameGUI(true);
+            _confederacy = new GameGUI(false);
+            Current = true;
+            return;
             for(int i = 0; i < _regions.Length; i++)
             {
-                GameObjects.Add(new RegionObject(_regions[i], this));
+                if(Random.Shared.Next(8) < 4)
+                {
+                    continue;
+                }
+                GameObjects.Add(new Troop(TroopType.Infantry, 4, _regions[i], true));
             }
-
-            _hud = new GameGUI();
         }
 
         private Vector2 cameraVelocity = Vector2.Zero;
@@ -53,13 +73,8 @@ namespace APUSH_Game.GameState
 
 
         public void Tick(GameTime Gametime)
-        {   
-            for(int i = GameObjects.Count - 1; i >= 0; i--)
-            {
-                GameObjects[i].Update();
-            }
-            _hud.Tick(Gametime);
-
+        {
+            #region Camera
             Vector2 accel = Vector2.Zero;
             if (InputHelper.Down(Keys.W))
                 accel += new Vector2(0, -accelerationRate);
@@ -69,7 +84,7 @@ namespace APUSH_Game.GameState
                 accel += new Vector2(-accelerationRate, 0);
             if (InputHelper.Down(Keys.D))
                 accel += new Vector2(accelerationRate, 0);
-            if (InputHelper.DeltaScroll != 0)
+            if (InputHelper.DeltaScroll != 0 && !ScrollLock)
                 zoomMValue = InputHelper.DeltaScroll > 0 ? 1.05f : 0.95f;
 
             gameCamera.Zoom *= zoomMValue;
@@ -82,6 +97,36 @@ namespace APUSH_Game.GameState
                 gameCamera.Location += (InputHelper.PrevMouseState.Position.V() - InputHelper.MouseLocation.V()) / gameCamera.Zoom;
 
             gameCamera.Location += cameraVelocity / gameCamera.Zoom;
+            #endregion
+
+            for (int i = GameObjects.Count - 1; i >= 0; i--)
+            {
+                GameObjects[i].Update();
+                if (GameObjects[i].Delete)
+                {
+                    GameObjects.RemoveAt(i);
+                }
+            }
+            _currentRef.Tick(Gametime);
+
+            if(InputHelper.RisingEdge(Keys.Space) && !_activeTransition)
+            {
+                _activeTransition = true;
+                _currentRef.AnimateOut().SetOnEnd(()=>
+                {
+                    Current = !Current;
+                    _currentRef = _currentRef == _union ? _confederacy : _union;
+                    NextPlayer();
+                    _currentRef.AnimateIn().SetOnEnd(() => _activeTransition = false);
+                });
+            }
+
+            State.Update();
+        }
+
+        private void NextPlayer()
+        {
+            _currentRef.NumPoliticalCapital = 6;
         }
 
         private static readonly Color BGColor = new Color(0, 162, 232);
@@ -91,16 +136,15 @@ namespace APUSH_Game.GameState
             
             gameCamera.StartSpriteBatch(Globals.SpriteBatch);
             Globals.SpriteBatch.Draw(_bg, Vector2.Zero, Color.White);
-            for (int i = GameObjects.Count - 1; i >= 0; i--)
+            for (int i = 0; i < GameObjects.Count; i++)
             {
                 GameObjects[i].Draw();
-                if (GameObjects[i].Delete)
-                    GameObjects.RemoveAt(i);
             }
+            State.Draw();
             Globals.SpriteBatch.End();
             
             Globals.SpriteBatch.Begin();
-            _hud.Draw(Gametime);
+            _currentRef.Draw(Gametime);
             GameRoot.Game.PostDraw?.Invoke(Gametime);
             GameRoot.Game.PostDraw = null;
             Globals.SpriteBatch.End();

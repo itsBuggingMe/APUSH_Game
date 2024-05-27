@@ -13,6 +13,9 @@ namespace APUSH_Game.Helpers
     /// </summary>
     internal static class InputHelper
     {
+        public static float DebugX => (float)MouseLocation.X / Globals.WindowSize.X;
+        public static float DebugY => (float)MouseLocation.Y / Globals.WindowSize.Y;
+
         /// <summary>
         /// Gets the current state of the keyboard.
         /// </summary>
