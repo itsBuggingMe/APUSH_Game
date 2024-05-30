@@ -20,7 +20,7 @@ namespace APUSH_Game.GameState
         {
             this.world = world;
             world.ScrollLock = true;
-            current = 0;
+            current = max;
             bg = new PromptBox(text, new Vector2(0.5f, 0.8f), false);
             this.whenSelected = whenSelected;
             this.min = min;

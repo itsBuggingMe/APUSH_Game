@@ -64,6 +64,8 @@ namespace APUSH_Game.GameState
             Set("New Orleans", 6, 8);
             Set("Richmond", 5, 7);
             Set("Shiloh", 4, 6);
+            Set("Atlanta", 4, 6);
+            Set("Savannah", 4, 6);
 
             void Set(string name, int min, int? max = null)
             {
