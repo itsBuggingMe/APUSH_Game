@@ -78,6 +78,13 @@ namespace APUSH_Game.Interface
         private GuiBase LeftPanel;
         private GuiBase RightPanel;
         public TurnAction CurrentAction { get; private set; }
+        public const int OriginalConfederateTerritories = 45;
+        public const int OriginalUnionTerritories = 96 - OriginalConfederateTerritories;
+
+        private CursorMessage CursorMessage { get; set; }
+
+        public TextElement Turn;
+
         public GameGUI(bool side) : base(Vector2.Zero)
         {
             color = side ? RegionObject.UnionState : RegionObject.ConfederateState;
@@ -85,44 +92,51 @@ namespace APUSH_Game.Interface
             LeftPanel = AddElement(new GuiBase());
             RightPanel = AddElement(new GuiBase());
 
-            moneyText = LeftPanel.AddElement(new TextElement(new Vector2(120, 105), "100", Color.Black, 0.7f, ElementAlign.LeftMiddle));
-            LeftPanel.AddElement(new Image(new Vector2(70, 100), Color.Black, new Vector2(0.3f), ElementAlign.Center, "MoneySymbol"));
+            moneyText = LeftPanel.AddElement(new TextElement(new Vector2(120, 105), "0", Color.Green, 0.7f, ElementAlign.LeftMiddle));
+            LeftPanel.AddElement(new Image(new Vector2(70, 100), Color.Green, new Vector2(0.3f), ElementAlign.Center, "MoneySymbol"));
 
             for(int i = 0; i < Troop.Sources.Length; i++)
             {
-                LeftPanel.AddElement(new TextElement(new Vector2(100, 200 + i * 150), Troop.Names[i], Color.Black, 0.25f, ElementAlign.Center));
-                LeftPanel.AddElement(new Image(new Vector2(100, 225 + i * 150), Color.White, new(0.4f), ElementAlign.TopMiddle, "NatoIcon", Troop.Sources[i]));
-                Troops[i] = LeftPanel.AddElement(new TextElement(new Vector2(185  , 278 + i * 150), "0", Color.Black, 0.5f, ElementAlign.LeftMiddle));
+                //LeftPanel.AddElement(new TextElement(new Vector2(100, 200 + i * 150), Troop.Names[i], Color.Black, 0.25f, ElementAlign.Center));
+                //LeftPanel.AddElement(new Image(new Vector2(100, 225 + i * 150), Color.White, new(0.4f), ElementAlign.TopMiddle, "NatoIcon", Troop.Sources[i]));
+                //Troops[i] = LeftPanel.AddElement(new TextElement(new Vector2(185  , 278 + i * 150), "0", Color.Black, 0.5f, ElementAlign.LeftMiddle));
             }
+
+            LeftPanel.AddElement(new TextElement(new Vector2(120, 300), "Turn:", Color.Black, 0.5f, ElementAlign.Center));
+            Turn = LeftPanel.AddElement(new TextElement(new Vector2(120, 380), "0", Color.Black, 0.5f, ElementAlign.Center));
 
             LeftPanel.AddElement(new TextElement(new Vector2(188, 830), "You Are:", Color.Black, 0.4f, ElementAlign.Center));
             LeftPanel.AddElement(new Image(new Vector2(180, 950), Color.White, Vector2.One, ElementAlign.Center, "Flags", 
                 side ? new Rectangle(0, 0, 255, 142) : new Rectangle(256, 0, 255, 142)));
 
             Vector2 pcOffset = new Vector2(75, -90);
-            RightPanel.AddElement(new TextElement(new Vector2(1700, 200) + pcOffset, "Political\nCapital:", Color.Black, 0.25f, ElementAlign.Center));
-            RightPanel.AddElement(new Image(new Vector2(1700, 300) + pcOffset, Color.Lerp(color, Color.Black, 0.5f), new(0.3f), ElementAlign.Center, "pcICON"));
-            politicalCapitalText = RightPanel.AddElement(new TextElement(new Vector2(1780, 205) + pcOffset, "0", Color.Black, 0.5f, ElementAlign.LeftMiddle));
+            RightPanel.AddElement(new TextElement(new Vector2(1650, 200) + pcOffset, "Political\nCapital:", Color.Black, 0.25f, ElementAlign.Center));
+            RightPanel.AddElement(new Image(new Vector2(1650, 300) + pcOffset, Color.Lerp(color, Color.Black, 0.5f), new(0.3f), ElementAlign.Center, "pcICON"));
+            politicalCapitalText = RightPanel.AddElement(new TextElement(new Vector2(1730, 205) + pcOffset, "0", Color.Black, 0.5f, ElementAlign.LeftMiddle));
 
-            RightPanel.AddElement(new TextElement(new Vector2(1780, 350), "Actions", Color.Black, 0.4f, ElementAlign.BottomMiddle));
+            RightPanel.AddElement(new TextElement(new Vector2(1730, 380), "Actions", Color.Black, 0.4f, ElementAlign.BottomMiddle));
             Color dc = Color.Lerp(color, Color.Black, 0.7f);
 
-            var box = RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1720, 370, 128, 128), new Rectangle(0, 384, 128, 128), Color.White));
+            var box = RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400, 128, 128), new Rectangle(0, 384, 128, 128), Color.White));
 
-            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1720, 370, 128, 128), new Rectangle(0,0,128,128), dc, () => MoveObj(0)));
-            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1720, 370 + 160, 128, 128), new Rectangle(0,128,128,128), dc, () => MoveObj(1)));
-            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1720, 370 + 320, 128, 128), new Rectangle(0,256,128,128), dc, () => MoveObj(2)));
+            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400, 128, 128), new Rectangle(0,0,128,128), dc, 
+                () => MoveObj(0), () => CursorMessage = new CursorMessage("Move")));
+            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400 + 160, 128, 128), new Rectangle(0,128,128,128), dc, 
+                () => MoveObj(1), () => CursorMessage = new CursorMessage("Deploy")));
+            RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400 + 320, 128, 128), new Rectangle(0,256,128,128), dc, 
+                () => MoveObj(2), () => CursorMessage = new CursorMessage("Attack")));
 
             void MoveObj(int callFrom)
             {
                 Vector2 currentLoc = box.LocalLocationUnscale;
                 AnimationPool.Instance.Request().Reset(
-                    f => box.LocalLocationUnscale = Vector2.Lerp(currentLoc, new Vector2(1720, 370 + callFrom * 160),f),
+                    f => box.LocalLocationUnscale = Vector2.Lerp(currentLoc, new Vector2(1670, 400 + callFrom * 160),f),
                     0, null, new KeyFrame(1, 20, AnimationType.EaseInOutExpo));
                 CurrentAction = (TurnAction)callFrom;
             }
 
-            NumPoliticalCapital = 6;
+            NumPoliticalCapital = 4;
+            NumDollars = side ? 7 : 4;
         }
 
         private const int AnimationDistance = 400;
@@ -160,8 +174,12 @@ namespace APUSH_Game.Interface
 
         public override void Draw(GameTime gameTime)
         {
-            //
-            //
+            if(CursorMessage is not null)
+            {
+                CursorMessage.Draw();
+                if (CursorMessage.Delete)
+                    CursorMessage = null;
+            }
             base.Draw(gameTime);
         }
         #endregion

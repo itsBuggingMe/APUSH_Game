@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace APUSH_Game.Helpers
 {
@@ -60,6 +61,11 @@ namespace APUSH_Game.Helpers
         /// </summary>
         public static Point MouseLocation => MouseState.Position;
 
+        public static int LeftMouseDownTime { get; private set; }
+        public static int RightMouseDownTime { get; private set; }
+
+        public static Point LeftMouseDownLoc { get; private set; }
+
         /// <summary>
         /// Updates the input states by capturing the current keyboard and mouse states.
         /// This method should be called at the beginning of each frame
@@ -74,6 +80,9 @@ namespace APUSH_Game.Helpers
             MouseState = Mouse.GetState();
             Touches = TouchPanel.GetState();
 
+            if (RisingEdge(MouseButton.Left))
+                LeftMouseDownLoc = MouseLocation;
+
             if (!GameRoot.Game.IsActive)
             {
                 PrevKeyboardState = default;
@@ -81,6 +90,12 @@ namespace APUSH_Game.Helpers
                 KeyboardState = default;
                 MouseState = default;
             }
+        }
+
+        public static void LateUpdate()
+        {
+            LeftMouseDownTime = Down(MouseButton.Left) ? LeftMouseDownTime + 1 : 0;
+            RightMouseDownTime = Down(MouseButton.Right) ? RightMouseDownTime + 1 : 0;
         }
 
         /// <summary>
@@ -115,6 +130,16 @@ namespace APUSH_Game.Helpers
                 return MouseState.LeftButton != PrevMouseState.LeftButton && MouseState.LeftButton == ButtonState.Pressed;
             }
             return MouseState.RightButton != PrevMouseState.RightButton && MouseState.RightButton == ButtonState.Pressed;
+        }
+
+        public static bool LeftMouseRisingEdgeUnSticky(int threshold = 10)
+        {
+            return RisingEdge(MouseButton.Left) && LeftMouseDownTime < threshold;
+        }
+
+        public static bool LeftMouseFallingEdgeUnSticky(int threshold = 10)
+        {
+            return FallingEdge(MouseButton.Left) && LeftMouseDownTime < threshold;
         }
 
         /// <summary>

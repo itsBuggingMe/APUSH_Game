@@ -18,20 +18,25 @@ namespace APUSH_Game.GameState
             CurrentTroops = new(TroopType.Infantry, troopCount, this, Data.TerritoryType != TerrioryType.ConfederateState);
             _texture = GameRoot.Game.Content.Load<Texture2D>("Packed");
             this.world = world;
-            _size = Math.Clamp(Data.MapBounds.Size.ToVector2().Length() * 0.0005f, 0.08f, 0.5f);
+            const float largestRec = 0.000523923539f;
+            _size = Math.Clamp(Data.MapBounds.Size.ToVector2().Length() * largestRec, 0, 0.95f);
             Position = new Vector2(Data.CenterX, Data.CenterY) - Data.TextureSource.Location.V() + Data.MapBounds.Location.V();
             ID = iD;
+            _transparency = GetTransparency();
+            _numTransparency = 0;
         }
 
         public Troop CurrentTroops { get; set; }
 
-        public bool IsSelected { get;  set; }
+        public bool IsSelected => world.State.Primary == this || world.State.Secondary == this;
         public bool MouseOver { get; private set; }
         public bool LightUp { get; set; }
         public Vector2 Position { get; private set; }
         public Region Data { get; init; }
         private GameWorld world;
         private float _size;
+        private Smoother _transparency;
+        private Smoother _numTransparency;
         public readonly int ID;
 
         public TerrioryType Type
@@ -50,24 +55,34 @@ namespace APUSH_Game.GameState
             Point worldMousePos = world.Camera.ScreenToWorld(InputHelper.MouseLocation.ToVector2()).ToPoint();
             MouseOver = IsInTerritory(worldMousePos);
 
-            if (InputHelper.FallingEdge(MouseButton.Left))
+            if (InputHelper.FallingEdge(MouseButton.Left) && Helper.TaxicabDistance(InputHelper.MouseLocation, InputHelper.LeftMouseDownLoc) < 4)
             {
                 if(IsSelected)
-                {
-                    IsSelected = !world.State.TryRegionDeselected(this);
-                }
-                else if(MouseOver)
-                {
-                    IsSelected = world.State.TryRegionSelected(this);
-                }
+                    world.State.TryRegionDeselected(this);
+                else if (MouseOver && LightUp)
+                    world.State.TryRegionSelected(this);
             }
+
+            _transparency.Approach((MouseOver || IsSelected) ? 1 : GetTransparency());
+            _numTransparency.Approach(smoothingConstant: 0.3f);
         }
 
         public static readonly Color UnionTerritory = new Color(112, 146, 190);
         public static readonly Color UnionState = new Color(91, 125, 217);
-        public static readonly Color ConfederateState = new Color(158, 158, 158);
+        public static readonly Color ConfederateState = new Color(158, 40, 32);
         public static readonly ImmutableArray<Color> Colors = new Color[] { UnionTerritory, UnionState, ConfederateState }.ToImmutableArray();
         private Texture2D _texture;
+
+        private float GetTransparency()
+        {
+            return NewTransparency(_size, world.Camera.Zoom) > 0.5f ? 1 : 0;
+            static float NewTransparency(float size, float zoom)
+            {
+                size -= 0.8f;
+                zoom -= 0.5f;
+                return SmoothInOutZero(size * 0.85f + zoom * 0.2f, 1.5f);
+            }
+        }
 
         public void Draw()
         {
@@ -79,14 +94,21 @@ namespace APUSH_Game.GameState
                 DrawNormal();
 
             //draw text
-            Color textColor = (MouseOver || IsSelected) ? Color.White : (Color.White * (_size > 0.2f ? 1 - TransparencyFunction(world.Camera.Zoom) : TransparencyFunction(world.Camera.Zoom)));
+
+
             Vector2 loc = Data.MapBounds.Location.V() +
                 new Vector2(Data.CenterX, Data.CenterY) -
                 Data.TextureSource.Location.V();
 
-            Globals.SpriteBatch.DrawStringCentered(CurrentTroops.TroopCount.ToString(), loc, 0.2f, color:Color.White ,layer: Depth.TextWorld);
-            Globals.SpriteBatch.DrawStringCentered(Data.RegionName, loc + Vector2.UnitY * 30, _size, textColor, Depth.TextWorld);
+            if (_transparency > 0.1f)
+                _numTransparency.Target = 0;
+            else
+                _numTransparency.Target = 1;
 
+            Globals.SpriteBatch.DrawStringCentered($"{Data.RegionName}: {CurrentTroops.TroopCount}", loc,
+                0.12f / world.Camera.Zoom * _transparency, Color.White * _transparency, Depth.TextWorld);
+            Globals.SpriteBatch.DrawStringCentered($"{CurrentTroops.TroopCount}", loc, 
+                0.06f * _size * 30 * _numTransparency, Color.White * _numTransparency, Depth.TextWorld);
 
             void DrawNormal()
             {
@@ -144,6 +166,11 @@ namespace APUSH_Game.GameState
             return Data.RegionName;
         }
 
-        private float TransparencyFunction(float x) => 1f / (1f + (float)Math.Exp(-(x * 20 - 10 * _size - 10)));
+        private static float SmoothInOutZero(float x, float pSize)
+        {
+            x *= 4;
+            float range0_1 =  x > 0 ? MathF.Tanh(-x + pSize) + 1 : MathF.Tanh(x + pSize) + 1;
+            return MathF.Pow(range0_1, 12);
+        }
     }
 }

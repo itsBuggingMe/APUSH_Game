@@ -14,8 +14,11 @@ namespace APUSH_Game.Interface.Elements
         private Texture2D texture;
         private float juice;
         private Action onClicked;
-        public SelectorButton(string txtre, Rectangle dest, Rectangle? source, Color color, Action OnClicked = null) : base(dest)
+        private Action onEnter;
+        private bool LastFrameState;
+        public SelectorButton(string txtre, Rectangle dest, Rectangle? source, Color color, Action OnClicked = null, Action onEnter = null) : base(dest)
         {
+            this.onEnter = onEnter;
             this.onClicked = OnClicked;
             texture = GameRoot.Game.Content.Load<Texture2D>(txtre);
             this.color = color;
@@ -26,6 +29,8 @@ namespace APUSH_Game.Interface.Elements
         {
             if (Bounds.Contains(InputHelper.MouseLocation))
             {
+                if (!LastFrameState)
+                    onEnter?.Invoke();
                 juice -= 2f;
                 if (InputHelper.FallingEdge(MouseButton.Left))
                     onClicked?.Invoke();
@@ -33,6 +38,7 @@ namespace APUSH_Game.Interface.Elements
                     juice += 4;
             }
             juice -= 0.4f * juice;
+            LastFrameState = Bounds.Contains(InputHelper.MouseLocation);
             base.Tick(gameTime);
         }
 

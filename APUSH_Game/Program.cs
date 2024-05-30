@@ -1,3 +1,2 @@
-﻿
-using var game = new APUSH_Game.GameRoot();
+﻿using var game = new APUSH_Game.GameRoot();
 game.Run();

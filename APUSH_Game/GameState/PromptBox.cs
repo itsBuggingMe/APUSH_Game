@@ -23,6 +23,7 @@ namespace APUSH_Game.GameState
         public bool Reactive { get; init; }
         private Action _onClick;
         private float sizem;
+
         public PromptBox(string text, Vector2 windowPortion, bool reactive = true, Action onClick = null, float sizem = 1)
         {
             this.sizem = sizem;
@@ -38,9 +39,15 @@ namespace APUSH_Game.GameState
             Globals.WindowSizeEvent += p => CalcuatePromptBounds();
         }
 
+        public void SetPosition(Vector2 portion)
+        {
+            _windowPortion = portion;
+            CalcuatePromptBounds();
+        }
+
         private void CalcuatePromptBounds()
         {
-            Vector2 size = Globals.Font.MeasureString(_prompt) * 1.1f * Size;
+            Vector2 size = Globals.Font.MeasureString(_prompt) * 1.5f * Size;
             Point sizeP = (size + new Vector2(64)).ToPoint();
             sizeP.X = Math.Max(128, sizeP.X);
             sizeP.Y = Math.Max(128, sizeP.Y);
@@ -114,6 +121,8 @@ namespace APUSH_Game.GameState
                 Draw(HSide, ref copy, GridSize, se: SpriteEffects.FlipVertically);
 
             Draw(Corner, ref copy, GridSize, se: SpriteEffects.FlipVertically | SpriteEffects.FlipHorizontally);
+
+            Globals.SpriteBatch.DrawStringCentered(_prompt, _windowPortion * Globals.WindowSize.V() + offsetVector, color: Color.White, size:Size);
         }
 
         private void Draw(Rectangle source, ref Rectangle screen, int offsetX = 0, int offsetY = 0, SpriteEffects se = SpriteEffects.None)

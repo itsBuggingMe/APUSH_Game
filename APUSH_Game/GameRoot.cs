@@ -58,6 +58,7 @@ namespace APUSH_Game
             ScreenManager.Instance.Tick(gameTime);
             AnimationPool.Instance.Update(gameTime);
 
+            InputHelper.LateUpdate();
             base.Update(gameTime);
         }
 

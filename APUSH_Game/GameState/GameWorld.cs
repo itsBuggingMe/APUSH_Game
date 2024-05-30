@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace APUSH_Game.GameState
     internal class GameWorld
     {
         private readonly RegionObject[] _regions;
+        public readonly List<TerritoryQuestion> questions;
+
         private readonly GameCamera gameCamera;
         public GameCamera Camera => gameCamera;
 
@@ -32,6 +35,8 @@ namespace APUSH_Game.GameState
         public bool ScrollLock { get; set; } = false;
         public StateManager State { get; private init; }
 
+        private List<PromptBox> questionsUpdate = new();
+
         public GameWorld()
         {
             gameCamera = new GameCamera();
@@ -44,24 +49,37 @@ namespace APUSH_Game.GameState
             _pk.GetData(colors);
 
             var data = JsonConvert.DeserializeObject<Region[]>(File.ReadAllText("terr.json"));
+            questions = JsonConvert.DeserializeObject<List<TerritoryQuestion>>(File.ReadAllText("ques.json"));
+
             _regions = new RegionObject[data.Length];
             for(int i = 0; i < data.Length; i++)
             {
-                GameObjects.Add(_regions[i] = new RegionObject(data[i], this, i, Random.Shared.Next(8)));
+                GameObjects.Add(_regions[i] = new RegionObject(data[i], this, i, Random.Shared.Next(2) + 1));
+            }
+            Set("Washington D.C", 5, 7);
+            Set("Missouri", 5, 7);
+            Set("West Maryland", 4, 6);
+            Set("California", 4, 6);
+
+            Set("New Orleans", 6, 8);
+            Set("Richmond", 5, 7);
+            Set("Shiloh", 4, 6);
+
+            void Set(string name, int min, int? max = null)
+            {
+                for(int i = 0; i < _regions.Length; i++)
+                {
+                    if (_regions[i].Data.RegionName == name)
+                    {
+                        _regions[i].CurrentTroops.TroopCount = Random.Shared.Next(min, max ?? (min + 1));
+                        break;
+                    }
+                }
             }
             State = new StateManager(_regions, this);
             _currentRef = _union = new GameGUI(true);
             _confederacy = new GameGUI(false);
             Current = true;
-            return;
-            for(int i = 0; i < _regions.Length; i++)
-            {
-                if(Random.Shared.Next(8) < 4)
-                {
-                    continue;
-                }
-                GameObjects.Add(new Troop(TroopType.Infantry, 4, _regions[i], true));
-            }
         }
 
         private Vector2 cameraVelocity = Vector2.Zero;
@@ -71,10 +89,35 @@ namespace APUSH_Game.GameState
         const float accelerationRate = 0.3f;
         const float decelerationRate = 0.98f;
 
+        private int turn;
 
-
+        private bool SupressLoss;
         public void Tick(GameTime Gametime)
         {
+            if((!SupressLoss && UnionCount == 0 || SouthCount == 0) || turn > 20)
+            {
+                SupressLoss = true;
+                AnimationPool.Instance.Request().Reset(f =>
+                {
+                    GameRoot.Game.PostDraw += g =>
+                    {
+                        Globals.SpriteBatch.Draw(Globals.Pixel, new Rectangle(Point.Zero, Globals.WindowSize), Color.Black * f);
+                    };
+                }, 0, () => ScreenManager.Instance.ChangeState(new EndState(UnionCount == 0, turn)), new KeyFrame(1, 120, AnimationType.EaseInOutQuart));
+            }
+            if(SupressLoss)
+            {
+                return;
+            }
+            gameCamera.Update(Gametime);
+            for(int i = 0; i < questionsUpdate.Count; i++)
+                questionsUpdate[i].Update();
+
+            if (question)
+            {
+                return;
+            }
+
             #region Camera
             Vector2 accel = Vector2.Zero;
             if (InputHelper.Down(Keys.W))
@@ -89,6 +132,12 @@ namespace APUSH_Game.GameState
                 zoomMValue = InputHelper.DeltaScroll > 0 ? 1.05f : 0.95f;
 
             gameCamera.Zoom *= zoomMValue;
+            //2.9, .25: range, 0.2 smooth const
+            if (gameCamera.Zoom > 2.9f)
+                gameCamera.Zoom -= (gameCamera.Zoom - 2.9f) * 0.2f;
+            if (gameCamera.Zoom < 0.25f)
+                gameCamera.Zoom -= (gameCamera.Zoom - 0.25f) * 0.2f;
+
             zoomMValue += (1 - zoomMValue) * 0.1f;
 
             cameraVelocity += accel;
@@ -98,6 +147,14 @@ namespace APUSH_Game.GameState
                 gameCamera.Location += (InputHelper.PrevMouseState.Position.V() - InputHelper.MouseLocation.V()) / gameCamera.Zoom;
 
             gameCamera.Location += cameraVelocity / gameCamera.Zoom;
+
+            Vector2 fromCenter = new Vector2(3150.7664f, 1723.9828f) - gameCamera.Location;
+            if (fromCenter.Length() > 2000)
+            {
+                Vector2 cl = gameCamera.Location;
+                Vector2 newLoc = new Vector2(cl.X.Approach(3150.7664f, 0.01f), cl.Y.Approach(1723.9828f, 0.01f));
+                gameCamera.Location = newLoc;
+            }
             #endregion
 
             for (int i = GameObjects.Count - 1; i >= 0; i--)
@@ -110,8 +167,13 @@ namespace APUSH_Game.GameState
             }
             _currentRef.Tick(Gametime);
 
-            if((_currentRef.NumPoliticalCapital <= 0 )&& !_activeTransition)
+            if((_currentRef.NumPoliticalCapital <= 0 || InputHelper.RisingEdge(Keys.Space))&& !_activeTransition)
             {
+                turn++;
+                _confederacy.Turn.Text = _union.Turn.Text = turn.ToString();
+                if(_currentRef.NumPoliticalCapital == 0)
+                    GameObjects.Add(new CursorMessage($"Not enough Political Capital. Continuing..."));
+
                 _activeTransition = true;
                 _currentRef.AnimateOut().SetOnEnd(()=>
                 {
@@ -127,9 +189,38 @@ namespace APUSH_Game.GameState
 
         private void NextPlayer()
         {
-            _currentRef.NumPoliticalCapital = 6;
+            float p;
+            int politicalCapitalIncrement;
+            int dollarsIncrement;
+
+            if (Current)
+            {
+                p = UnionCount / (float)GameGUI.OriginalUnionTerritories;
+                politicalCapitalIncrement = (int)Math.Clamp(2 * p, 1, 5);
+                dollarsIncrement = (int)Math.Clamp(4 * p, 1, 5);
+            }
+            else
+            {
+                p = SouthCount / (float)GameGUI.OriginalConfederateTerritories;
+                politicalCapitalIncrement = (int)Math.Clamp(3 * p, 1, 5);
+                dollarsIncrement = (int)Math.Clamp(2 * p, 1, 5);
+            }
+
+            _currentRef.NumPoliticalCapital += politicalCapitalIncrement;
+            _currentRef.NumDollars += dollarsIncrement;
+
+            AnimationPool.Instance.Request().Reset(Actions.Empty, 0, () => GameObjects.Add(new CursorMessage($"+{dollarsIncrement} Dollars. +{politicalCapitalIncrement} Political Captiol")), new KeyFrame(0, 60));
         }
 
+
+        private static T Route<T>(T input, Action<T> toDo)
+        {
+            toDo(input);
+            return input;
+        }
+
+        private int SouthCount => _regions.Count(c => c.Data.TerritoryType == TerrioryType.ConfederateState);
+        private int UnionCount => 96 - SouthCount;
         private static readonly Color BGColor = new Color(0, 162, 232);
         public void Draw(GameTime Gametime)
         {
@@ -137,6 +228,8 @@ namespace APUSH_Game.GameState
             
             gameCamera.StartSpriteBatch(Globals.SpriteBatch);
             Globals.SpriteBatch.Draw(_bg, Vector2.Zero, Color.White);
+            foreach (var item in questionsUpdate)
+                item.Draw();
             for (int i = 0; i < GameObjects.Count; i++)
             {
                 GameObjects[i].Draw();
@@ -159,31 +252,63 @@ namespace APUSH_Game.GameState
             return colors[p.X + p.Y * _pk.Width];
         }
 
-        public void AskQuestion(string question, int correctIndex, params string[] responses)
+        private bool question = false;
+        public void AskQuestion(TerritoryQuestion q)
         {
-            throw new NotImplementedException();
-            /*
-            int mainbox = _em.AddEntity(new PromptBox(question, new Vector2(0.5f, 0.38f), false, null, 0.8f), new PromptBoxDrawer(), new TextDrawer());
-            PromptBox p = _em.GetOrThrow<PromptBox>(mainbox);
-
-            Rectangle smallRect = new Rectangle(p.PromptBounds.X, p.PromptBounds.Bottom - 48, p.PromptBounds.Width, 256);
-
-            int[] ids = new int[responses.Length + 1];
-            ids[ids.Length - 1] = mainbox;
-
-            for (int i = 0; i < responses.Length; i++)
+            question = true;
+            string correct = q.Answers[0];
+            for (int i = 2; i >= 0; i--)
             {
-                ids[i] = _em.AddEntity(new PromptBox(responses[i], smallRect.Center.V() / Globals.WindowSize.V(), true, Clear, 0.5f), new PromptBoxDrawer(), new TextDrawer());
-                smallRect.Offset(0, 128 + 16);
+                int newIndex = Random.Shared.Next(i);
+                (q.Answers[i], q.Answers[newIndex]) = (q.Answers[newIndex], q.Answers[i]);
+            }
+            int correctIndex = Array.IndexOf(q.Answers, correct);
+
+            var b = new PromptBox(RebuildSentence(q.Question), new Vector2(0.5f, 0.35f), false);
+            questionsUpdate.Add(b);
+            Vector2 hoverBoxBelow = new Vector2(b.PromptBounds.Center.X, b.PromptBounds.Bottom + 128 * Globals.ScaleVec.Y) / Globals.WindowSize.V();
+            Vector2 ansLeftPos = hoverBoxBelow + new Vector2(0.25f, 0);
+            Vector2 ansRightPos = hoverBoxBelow - new Vector2(0.25f, 0);
+
+            questionsUpdate.Add(new PromptBox(q.Answers[1], hoverBoxBelow, true, () => AnswerClicked(1), 0.7f));
+            questionsUpdate.Add(new PromptBox(q.Answers[0], ansLeftPos, true, () => AnswerClicked(0), 0.7f));
+            questionsUpdate.Add(new PromptBox(q.Answers[2], ansRightPos, true, () => AnswerClicked(2), 0.7f));
+
+            void AnswerClicked(int index)
+            {
+                if(correctIndex == index)
+                {
+                    _currentRef.NumDollars += 2;
+                    GameObjects.Add(new CursorMessage("+2 Dollars"));
+                }
+                questionsUpdate.Clear();
+                AnimationPool.Instance.Request().Reset(Actions.Empty, 0, () => question = false, new KeyFrame(0, 2));
+            }
+        }
+
+        public static string RebuildSentence(string s)
+        {
+            StringBuilder sb = new StringBuilder();
+            string[] words = s.Split(' ');
+            float travel = 0;
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                sb.Append(words[i]);
+                if(travel > 1600)
+                {
+                    sb.Append('\n');
+                    travel = 0;
+                }
+                else
+                {
+                    sb.Append(' ');
+                }
+
+                travel += Globals.Font.MeasureString(words[i]).X;
             }
 
-            void Clear()
-            {
-                for(int i = 0; i < ids.Length; i++)
-                {
-                    _em.RemoveEntity(ids[i]);
-                }
-            }*/
+            return sb.ToString();
         }
     }
 }

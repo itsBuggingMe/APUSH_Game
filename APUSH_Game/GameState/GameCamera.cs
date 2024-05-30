@@ -50,7 +50,20 @@ namespace APUSH_Game.GameState
         public Vector2 ScreenToWorld(Vector2 screen) => _camera.ScreenToWorld(screen);
         public void Update(GameTime gameTime) => ScreenShake -= gameTime.ElapsedGameTime.Milliseconds;
         public void Set() => _camera.SetViewport();
-        public void StartSpriteBatch(SpriteBatch spriteBatch) => spriteBatch.Begin(transformMatrix: _camera.View, sortMode: SpriteSortMode.FrontToBack);
+        public void StartSpriteBatch(SpriteBatch spriteBatch)
+        {
+            if(ScreenShake > 0)
+            {
+                Vector2 p = Location;
+                Location += new Vector2(Random.Shared.NextSingle(-1,1), Random.Shared.NextSingle(-1,1)) * 8f / Zoom;
+                spriteBatch.Begin(transformMatrix: _camera.View, sortMode: SpriteSortMode.FrontToBack);
+                Location = p;
+            }
+            else
+            {
+                spriteBatch.Begin(transformMatrix: _camera.View, sortMode: SpriteSortMode.FrontToBack);
+            }
+        }
         public void StartShapeBatch(ShapeBatch spriteBatch) => spriteBatch.Begin(_camera.View);
         public void Reset() => _camera.ResetViewport();
         public void SetPosition(Vector2 vector2) => Location = vector2;
