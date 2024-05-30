@@ -328,12 +328,18 @@ namespace APUSH_Game.GameState
                             Secondary.Data.TerritoryType = TerrioryType.UnionState;
                         else
                             Secondary.Data.TerritoryType = Primary.Data.TerritoryType == TerrioryType.UnionState ? TerrioryType.UnionState : TerrioryType.ConfederateState;
+                        
                         Primary.CurrentTroops.TroopCount = 1;
                         Secondary.CurrentTroops.TroopCount = na - 1;
                         World.CurrentGameGUI.NumPoliticalCapital++;
                         World.Camera.ScreenShake = 80;
                         Primary = Secondary;
                         Secondary = null;
+
+                        if(Primary.CurrentTroops.TroopCount <= 0)
+                        {
+                            Primary = null;
+                        }
                         return false;
                     }
                     else
@@ -408,7 +414,8 @@ namespace APUSH_Game.GameState
                     {
                         Parent.Primary.CurrentTroops.TroopCount += s;
                         World.CurrentGameGUI.NumDollars -= s;
-                        World.GameObjects.Add(new CursorMessage($"-{s} Dollars"));
+                        if(s != 0)
+                            World.GameObjects.Add(new CursorMessage($"-{s} Dollars"));
                         Reset();
 
                         ss.Delete = true;

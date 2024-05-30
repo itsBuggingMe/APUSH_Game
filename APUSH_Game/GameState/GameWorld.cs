@@ -149,11 +149,15 @@ namespace APUSH_Game.GameState
             gameCamera.Location += cameraVelocity / gameCamera.Zoom;
 
             Vector2 fromCenter = new Vector2(3150.7664f, 1723.9828f) - gameCamera.Location;
-            if (fromCenter.Length() > 2000)
+            if (Math.Abs(fromCenter.X) > 2000)
             {
-                Vector2 cl = gameCamera.Location;
-                Vector2 newLoc = new Vector2(cl.X.Approach(3150.7664f, 0.01f), cl.Y.Approach(1723.9828f, 0.01f));
-                gameCamera.Location = newLoc;
+                var clx = gameCamera.Location.X;
+                gameCamera.Location = new Vector2(clx.Approach(3150, 0.01f), gameCamera.Location.Y);
+            }
+            if (Math.Abs(fromCenter.Y) > 2000)
+            {
+                var cly = gameCamera.Location.Y;
+                gameCamera.Location = new Vector2(gameCamera.Location.X, cly.Approach(1723.9828f, 0.01f));
             }
             #endregion
 
@@ -282,7 +286,7 @@ namespace APUSH_Game.GameState
                     GameObjects.Add(new CursorMessage("+2 Dollars"));
                 }
                 questionsUpdate.Clear();
-                AnimationPool.Instance.Request().Reset(Actions.Empty, 0, () => question = false, new KeyFrame(0, 2));
+                AnimationPool.Instance.Request().Reset(Actions.Empty, 0, () => question = false, new KeyFrame(0, 60));
             }
         }
 
