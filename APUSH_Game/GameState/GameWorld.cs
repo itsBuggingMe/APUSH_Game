@@ -61,7 +61,7 @@ namespace APUSH_Game.GameState
             Set("West Maryland", 4, 6);
             Set("California", 4, 6);
 
-            Set("New Orleans", 6, 8);
+            Set("New Orleans", 8, 10);
             Set("Richmond", 5, 7);
             Set("Shiloh", 4, 6);
             Set("Atlanta", 4, 6);
@@ -96,16 +96,11 @@ namespace APUSH_Game.GameState
         private bool SupressLoss;
         public void Tick(GameTime Gametime)
         {
-            if((!SupressLoss && UnionCount == 0 || SouthCount == 0) || turn > 20)
+            if(!SupressLoss && (UnionCount == 0 || SouthCount == 0 || turn > 2))
             {
                 SupressLoss = true;
-                AnimationPool.Instance.Request().Reset(f =>
-                {
-                    GameRoot.Game.PostDraw += g =>
-                    {
-                        Globals.SpriteBatch.Draw(Globals.Pixel, new Rectangle(Point.Zero, Globals.WindowSize), Color.Black * f);
-                    };
-                }, 0, () => ScreenManager.Instance.ChangeState(new EndState(UnionCount == 0, turn)), new KeyFrame(1, 120, AnimationType.EaseInOutQuart));
+                GameObjects.RemoveAll(g => g is CursorMessage);
+                FadeTransition(new EndState(UnionCount == 0, turn));
             }
             if(SupressLoss)
             {
@@ -191,6 +186,27 @@ namespace APUSH_Game.GameState
             }
 
             State.Update();
+        }
+
+        public static void FadeTransition(IScreen newState)
+        {
+            AnimationPool.Instance.Request().Reset(f =>
+            {
+                GameRoot.Game.PostDraw += g =>
+                {
+                    Globals.SpriteBatch.Draw(Globals.Pixel, new Rectangle(Point.Zero, Globals.WindowSize), Color.Black * f);
+                };
+            }, 0, () =>
+            {
+                ScreenManager.Instance.ChangeState(newState);
+                AnimationPool.Instance.Request().Reset(f =>
+                {
+                    GameRoot.Game.PostDraw += g =>
+                    {
+                        Globals.SpriteBatch.Draw(Globals.Pixel, new Rectangle(Point.Zero, Globals.WindowSize), Color.Black * f);
+                    };
+                }, 1, null, new KeyFrame(0, 120, AnimationType.EaseInOutQuart));
+            }, new KeyFrame(1, 120, AnimationType.EaseInOutQuart));
         }
 
         private void NextPlayer()

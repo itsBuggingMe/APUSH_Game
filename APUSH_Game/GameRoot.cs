@@ -41,7 +41,7 @@ namespace APUSH_Game
             Gui.Initalize(this, new Point(1920, 1080));
             ToggleBorderless();
 
-            ScreenManager.Initalise(new MainGameState());
+            ScreenManager.Initalise(new StartState());
         }
 
         protected override void Update(GameTime gameTime)
@@ -50,8 +50,6 @@ namespace APUSH_Game
 
             Globals.Update(gameTime);
 
-            if (InputHelper.Down(Keys.Escape))
-                Exit();
             if (InputHelper.RisingEdge(Keys.F11))
                 ToggleBorderless();
 

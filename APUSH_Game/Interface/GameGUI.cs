@@ -118,7 +118,7 @@ namespace APUSH_Game.Interface
             Color dc = Color.Lerp(color, Color.Black, 0.7f);
 
             var box = RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400, 128, 128), new Rectangle(0, 384, 128, 128), Color.White));
-
+            dc = Color.White;
             RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400, 128, 128), new Rectangle(0,0,128,128), dc, 
                 () => MoveObj(0), () => CursorMessage = new CursorMessage("Move")));
             RightPanel.AddElement(new SelectorButton("ActIcons", new Rectangle(1670, 400 + 160, 128, 128), new Rectangle(0,128,128,128), dc, 

@@ -18,6 +18,7 @@ namespace APUSH_Game.GameState
         public Color Color => Color.White;
         public float Size => 0.3f * Globals.Scale * sizem;
         public Vector2 Position => _windowPortion * Globals.WindowSize.V() + offsetVector;
+        public Vector2 WindowPosition => _windowPortion;
         private Vector2 _windowPortion;
         public bool Post => true;
         public bool Reactive { get; init; }

@@ -62,7 +62,11 @@ namespace APUSH_Game.GameState
                 else if (MouseOver && LightUp)
                     world.State.TryRegionSelected(this);
             }
-
+            if(InputHelper.Down(Keys.Escape))
+            {
+                if (IsSelected)
+                    world.State.TryRegionDeselected(this);
+            }
             _transparency.Approach((MouseOver || IsSelected) ? 1 : GetTransparency());
             _numTransparency.Approach(smoothingConstant: 0.3f);
         }
@@ -109,6 +113,9 @@ namespace APUSH_Game.GameState
                 0.12f / world.Camera.Zoom * _transparency, Color.White * _transparency, Depth.TextWorld);
             Globals.SpriteBatch.DrawStringCentered($"{CurrentTroops.TroopCount}", loc, 
                 0.06f * _size * 30 * _numTransparency, Color.White * _numTransparency, Depth.TextWorld);
+            const float Darkest = 0.6f;
+            const float Medium = 0.85f;
+            const float Lightest = 1.2f;
 
             void DrawNormal()
             {
@@ -116,7 +123,7 @@ namespace APUSH_Game.GameState
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
-                    Colors[(int)Data.TerritoryType] * 0.7f,
+                    Colors[(int)Data.TerritoryType] * Darkest,
                     0,
                     Vector2.Zero,
                     SpriteEffects.None,
@@ -129,7 +136,7 @@ namespace APUSH_Game.GameState
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
-                    Colors[(int)Data.TerritoryType] * 0.85f,
+                    Colors[(int)Data.TerritoryType] * Medium,
                     0,
                     Vector2.Zero,
                     SpriteEffects.None,
@@ -142,7 +149,7 @@ namespace APUSH_Game.GameState
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
-                    Colors[(int)Data.TerritoryType] * 0.7f,
+                    Colors[(int)Data.TerritoryType] * Darkest,
                     0,
                     Vector2.Zero,
                     SpriteEffects.None,
@@ -153,7 +160,7 @@ namespace APUSH_Game.GameState
                     _texture, 
                     Data.MapBounds.OffsetCopy(new Point(-3)), 
                     Data.TextureSource, 
-                    Colors[(int)Data.TerritoryType], 
+                    Colors[(int)Data.TerritoryType] * Lightest, 
                     0, 
                     Vector2.Zero, 
                     SpriteEffects.None,
