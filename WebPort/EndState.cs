@@ -21,7 +21,7 @@ namespace APUSH_Game
                     new Vector2(0.5f, 0.4f), false));
             else
                 obj.Add(new PromptBox(GameWorld
-                    .RebuildSentence($"With the growing unpopularity of the war after 20 turns, the Union is forced to sue for peace. The US will remain separated."),
+                    .RebuildSentence($"With the growing unpopularity of the war after 15 turns, the Union is forced to sue for peace. The US will remain separated."),
                     new Vector2(0.5f, 0.4f), false));
 
             obj.Add(new PromptBox("Back to Start", new Vector2(0.5f, 0.7f), true, () => GameWorld.FadeTransition(new StartState())));

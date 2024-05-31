@@ -437,9 +437,11 @@ namespace APUSH_Game.GameState
                 (attackTroops, defendTroops) = 
                     attackScore > defendScore ? (attackTroops, defendTroops - 1) : (attackTroops - 1, defendTroops);
 
-                if(Random.Shared.Next() % 30 == 0)
+                if(Random.Shared.Next() % 30 == 0)//draw chance
                     break;
             }
+
+            
 
             static IEnumerable<int> RollDice(int cnt)
             {

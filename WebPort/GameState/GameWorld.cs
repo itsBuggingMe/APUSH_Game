@@ -60,7 +60,7 @@ namespace APUSH_Game.GameState
             Set("California", 4, 6);
 
             Set("New Orleans", 8, 10);
-            Set("Richmond", 5, 7);
+            Set("Richmond", 8, 10);
             Set("Shiloh", 4, 6);
             Set("Atlanta", 4, 6);
             Set("Savannah", 4, 6);
@@ -94,11 +94,11 @@ namespace APUSH_Game.GameState
         private bool SupressLoss;
         public void Tick(GameTime Gametime)
         {
-            if(Globals.TotalFrames % 60 == 0 && !SupressLoss && (UnionCount == 0 || SouthCount == 0 || turn > 2))
+            if(Globals.TotalFrames % 60 == 0 && !SupressLoss && (UnionCount == 0 || SouthCount == 0 || turn > 15))
             {
                 SupressLoss = true;
                 GameObjects.RemoveAll(g => g is CursorMessage);
-                FadeTransition(new EndState(UnionCount == 0, turn));
+                FadeTransition(new EndState(SouthCount == 0, turn));
             }
             if(SupressLoss)
             {
