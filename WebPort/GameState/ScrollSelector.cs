@@ -34,9 +34,9 @@ namespace APUSH_Game.GameState
             if(InputHelper.DeltaScroll != 0)
                 currentVel += (InputHelper.DeltaScroll > 0 ? -1 : 1) * -0.1f;
             if (InputHelper.Down(Keys.Left))
-                currentVel += 0.02f;
-            if (InputHelper.Down(Keys.Right))
                 currentVel -= 0.02f;
+            if (InputHelper.Down(Keys.Right))
+                currentVel += 0.02f;
 
             current += currentVel;
             currentVel *= 0.9f;

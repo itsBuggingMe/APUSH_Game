@@ -125,6 +125,10 @@ namespace APUSH_Game.GameState
                 accel += new Vector2(accelerationRate, 0);
             if (InputHelper.DeltaScroll != 0 && !ScrollLock)
                 zoomMValue = InputHelper.DeltaScroll > 0 ? 1.05f : 0.95f;
+            if (InputHelper.Down(Keys.Q))
+                zoomMValue = 1.02f;
+            if (InputHelper.Down(Keys.E))
+                zoomMValue = 0.98f;
 
             gameCamera.Zoom *= zoomMValue;
             //2.9, .25: range, 0.2 smooth const
