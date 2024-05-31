@@ -111,7 +111,7 @@ namespace APUSH_Game.Interface
 
             Vector2 pcOffset = new Vector2(75, -90);
             RightPanel.AddElement(new TextElement(new Vector2(1650, 200) + pcOffset, "Political\nCapital:", Color.Black, 0.25f, ElementAlign.Center));
-            RightPanel.AddElement(new Image(new Vector2(1650, 300) + pcOffset, Color.Lerp(color, Color.Black, 0.5f), new(0.3f), ElementAlign.Center, "pcICON"));
+            RightPanel.AddElement(new Image(new Vector2(1650, 300) + pcOffset, Color.Lerp(color, Color.Black, 0.5f), new(0.3f), ElementAlign.Center, "PCicon"));
             politicalCapitalText = RightPanel.AddElement(new TextElement(new Vector2(1730, 205) + pcOffset, "0", Color.Black, 0.5f, ElementAlign.LeftMiddle));
 
             RightPanel.AddElement(new TextElement(new Vector2(1730, 380), "Actions", Color.Black, 0.4f, ElementAlign.BottomMiddle));

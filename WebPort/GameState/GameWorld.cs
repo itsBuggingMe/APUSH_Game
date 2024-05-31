@@ -42,7 +42,7 @@ namespace APUSH_Game.GameState
             gameCamera = new GameCamera();
             gameCamera.Location = new Vector2(3150.7664f,  1723.9828f);
             gameCamera.Zoom = 0.284573227f;
-            _bg = new LargeTexture("mapBg");
+            _bg = new LargeTexture("MapBg");
 
             _pk = new LargeTexture("Packed", true);
 
