@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>WebPort</RootNamespace>
+    <AssemblyName>WebPort</AssemblyName>
+    <DefineConstants>$(DefineConstants);BLAZORGL</DefineConstants>
+	<KniPlatform>BlazorGL</KniPlatform>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="ques.json" />
+    <Content Remove="terr.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CursorMessage.cs" />
+    <Compile Include="Depth.cs" />
+    <Compile Include="EndState.cs" />
+    <Compile Include="GameInfo.cs" />
+    <Compile Include="GameRoot.cs" />
+    <Compile Include="GameState\CountyDraw.cs" />
+    <Compile Include="GameState\GameCamera.cs" />
+    <Compile Include="GameState\GameWorld.cs" />
+    <Compile Include="GameState\IGameObject.cs" />
+    <Compile Include="GameState\MainGameState.cs" />
+    <Compile Include="GameState\PromptBox.cs" />
+    <Compile Include="GameState\Region.cs" />
+    <Compile Include="GameState\ScrollSelector.cs" />
+    <Compile Include="GameState\StateManager.cs" />
+    <Compile Include="GameState\Troop.cs" />
+    <Compile Include="Helpers\Actions.cs" />
+    <Compile Include="Helpers\Animation.cs" />
+    <Compile Include="Helpers\Apos.Camera.cs" />
+    <Compile Include="Helpers\Globals.cs" />
+    <Compile Include="Helpers\GlobalUsings.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\InputHelper.cs" />
+    <Compile Include="Helpers\IScreen.cs" />
+    <Compile Include="Helpers\Pool.cs" />
+    <Compile Include="Helpers\ScreenManager.cs" />
+    <Compile Include="Helpers\Smoother.cs" />
+    <Compile Include="Interface\BoundedGui.cs" />
+    <Compile Include="Interface\ElementAlign.cs" />
+    <Compile Include="Interface\Elements\Image.cs" />
+    <Compile Include="Interface\Elements\SelectorButton.cs" />
+    <Compile Include="Interface\Elements\Text.cs" />
+    <Compile Include="Interface\GameGUI.cs" />
+    <Compile Include="Interface\Gui.cs" />
+    <Compile Include="Interface\GuiBase.cs" />
+    <Compile Include="Interface\GuiHelper.cs" />
+    <Compile Include="Interface\TextReader.cs" />
+    <Compile Include="LargeTexture.cs" />
+    <Compile Include="Pages\Index.razor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="StartState.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="nkast.Xna.Framework" Version="3.10.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Blazor" Version="3.10.9001" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.11" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <KniContentReference Include="Content\WebPortContent.mgcb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ques.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="terr.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\Kni.Content.Builder.targets" />
+</Project>

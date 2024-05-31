@@ -96,7 +96,7 @@ namespace APUSH_Game.GameState
         private bool SupressLoss;
         public void Tick(GameTime Gametime)
         {
-            if(!SupressLoss && (UnionCount == 0 || SouthCount == 0 || turn > 2))
+            if(Globals.TotalFrames % 60 == 0 && !SupressLoss && (UnionCount == 0 || SouthCount == 0 || turn > 2))
             {
                 SupressLoss = true;
                 GameObjects.RemoveAll(g => g is CursorMessage);

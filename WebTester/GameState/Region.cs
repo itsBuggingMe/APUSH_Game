@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebPort;
 
 namespace APUSH_Game.GameState
 {
@@ -16,7 +17,7 @@ namespace APUSH_Game.GameState
         {
             Data = r;
             CurrentTroops = new(TroopType.Infantry, troopCount, this, Data.TerritoryType != TerrioryType.ConfederateState);
-            _texture = GameRoot.Game.Content.Load<Texture2D>("Packed");
+            _texture = new LargeTexture("Packed");
             this.world = world;
             const float largestRec = 0.000523923539f;
             _size = Math.Clamp(Data.MapBounds.Size.ToVector2().Length() * largestRec, 0, 0.95f);
@@ -58,12 +59,12 @@ namespace APUSH_Game.GameState
 
             if (InputHelper.FallingEdge(MouseButton.Left) && Helper.TaxicabDistance(InputHelper.MouseLocation, InputHelper.LeftMouseDownLoc) < 4)
             {
-                if (IsSelected)
+                if(IsSelected)
                     world.State.TryRegionDeselected(this);
                 else if (MouseOver && LightUp)
                     world.State.TryRegionSelected(this);
             }
-            if (InputHelper.Down(Keys.Escape))
+            if(InputHelper.Down(Keys.Escape))
             {
                 if (IsSelected)
                     world.State.TryRegionDeselected(this);
@@ -76,7 +77,7 @@ namespace APUSH_Game.GameState
         public static readonly Color UnionState = new Color(91, 125, 217);
         public static readonly Color ConfederateState = new Color(158, 40, 32);
         public static readonly ImmutableArray<Color> Colors = new Color[] { UnionTerritory, UnionState, ConfederateState }.ToImmutableArray();
-        private Texture2D _texture;
+        private LargeTexture _texture;
         private Vector2 StringSize;
 
         private float GetTransparency()
@@ -111,17 +112,18 @@ namespace APUSH_Game.GameState
             else
                 _numTransparency.Target = 1;
 
-            Globals.SpriteBatch.DrawStringCenteredKnownSize(StringSize, $"{Data.RegionName}: {CurrentTroops.TroopCount}", loc,
+            Globals.SpriteBatch.DrawStringCenteredKnownSize(StringSize, CurrentTroops.dispString, loc,
                 0.12f / world.Camera.Zoom * _transparency, Color.White * _transparency, Depth.TextWorld);
-            Globals.SpriteBatch.DrawStringCentered($"{CurrentTroops.TroopCount}", loc,
+            Globals.SpriteBatch.DrawStringCentered(CurrentTroops.TroopCount.ToString(), loc, 
                 0.06f * _size * 30 * _numTransparency, Color.White * _numTransparency, Depth.TextWorld);
+
             const float Darkest = 0.6f;
             const float Medium = 0.85f;
             const float Lightest = 1.2f;
 
             void DrawNormal()
             {
-                Globals.SpriteBatch.Draw(
+                Globals.SpriteBatch.DrawLarge(
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
@@ -134,7 +136,7 @@ namespace APUSH_Game.GameState
 
             void DrawLight()
             {
-                Globals.SpriteBatch.Draw(
+                Globals.SpriteBatch.DrawLarge(
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
@@ -147,7 +149,7 @@ namespace APUSH_Game.GameState
 
             void DrawOffset()
             {
-                Globals.SpriteBatch.Draw(
+                Globals.SpriteBatch.DrawLarge(
                     _texture,
                     Data.MapBounds,
                     Data.TextureSource,
@@ -157,14 +159,14 @@ namespace APUSH_Game.GameState
                     SpriteEffects.None,
                     Depth.Territory);
 
-
-                Globals.SpriteBatch.Draw(
-                    _texture,
-                    Data.MapBounds.OffsetCopy(new Point(-3)),
-                    Data.TextureSource,
-                    Colors[(int)Data.TerritoryType] * Lightest,
-                    0,
-                    Vector2.Zero,
+                
+                Globals.SpriteBatch.DrawLarge(
+                    _texture, 
+                    Data.MapBounds.OffsetCopy(new Point(-3)), 
+                    Data.TextureSource, 
+                    Colors[(int)Data.TerritoryType] * Lightest, 
+                    0, 
+                    Vector2.Zero, 
                     SpriteEffects.None,
                     Depth.Territory + Depth.Epsilon);
             }
@@ -178,7 +180,7 @@ namespace APUSH_Game.GameState
         private static float SmoothInOutZero(float x, float pSize)
         {
             x *= 4;
-            float range0_1 = x > 0 ? MathF.Tanh(-x + pSize) + 1 : MathF.Tanh(x + pSize) + 1;
+            float range0_1 =  x > 0 ? MathF.Tanh(-x + pSize) + 1 : MathF.Tanh(x + pSize) + 1;
             return MathF.Pow(range0_1, 12);
         }
     }

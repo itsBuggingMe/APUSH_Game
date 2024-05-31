@@ -1,0 +1,227 @@
+﻿[
+  {
+    "TerritoryName": "Manasses",
+    "Question": "The first Battle of Bull Run (first Battle of Manassas), was the first major land battle of the civil war. Who won this battle?",
+    "Answers": [
+      "Confederacy",
+      "   Union   ",
+      "Inconclusive"
+    ]
+  },
+  {
+    "TerritoryName": "Shiloh",
+    "Question": "The battle of Shiloh was when Union forces met Confederate resistance when trying to capture a major southern railway line. What was the famous Union general at this battle?",
+    "Answers": [
+      "Ulysses S. Grant",
+      " Winfield Scott ",
+      "George McClellan"
+    ]
+  },
+  {
+    "TerritoryName": "Antietam",
+    "Question": "This was a major battle where Robert E. Lee tried to take the war to the North, in order to force peace. Who won this battle?",
+    "Answers": [
+      "Was a draw",
+      "   Union   ",
+      "Confederacy"
+    ]
+  },
+  {
+    "TerritoryName": "Antietam",
+    "Question": "Which Union General(who later ran for president) fought at this decisive battle?",
+    "Answers": [
+      "George B. McClellan",
+      " Ulysses S. Grant  ",
+      "Rutherford B. Hayes"
+    ]
+  },
+  {
+    "TerritoryName": "Gettysburg",
+    "Question": "What speech did Lincoln deliver ar Gettysburg?",
+    "Answers": [
+      "Gettysburg Address",
+      " Farewell Address ",
+      "   War on Terror   "
+    ]
+  },
+  {
+    "TerritoryName": "Gettysburg",
+    "Question": "What was the last ditch Confederate attempt to break through at Gettysburg called?",
+    "Answers": [
+      "Pickett's Charge",
+      "Jackson's Charge",
+      " There was none. "
+    ]
+  },
+  {
+    "TerritoryName": "Antietam",
+    "Question": "What was NOT related to one of the motivations for making the emancipation proclamation?",
+    "Answers": [
+      "  Slave rebellions  ",
+      "European intervention",
+      "     Scope of war    "
+    ]
+  },
+  {
+    "TerritoryName": "Southern Louisiana",
+    "Question": "What was name of the Union's main strategy?",
+    "Answers": [
+      " Anaconda Plan ",
+      "  Python Plan  ",
+      "Armada Strategy"
+    ]
+  },
+  {
+    "TerritoryName": "South Chesapeake Bay",
+    "Question": "Which one of these was NOT an inital advantage of the North?",
+    "Answers": [
+      "Moral Cause",
+      "Higher GDP",
+      "Better Navy"
+    ]
+  },
+  {
+    "TerritoryName": "West Maryland",
+    "Question": "Which one of these was NOT an inital advantage of the South?",
+    "Answers": [
+      "Better trade",
+      "Defensive War",
+      "Good generals"
+    ]
+  },
+  {
+    "TerritoryName": "Western Tennessee",
+    "Question": "Which Confederate General instigated the Fort Pillow Massacre",
+    "Answers": [
+      "  Nathan Forrest ",
+      "Stonewall Jackson",
+      "It did not exist"
+    ]
+  },
+  {
+    "TerritoryName": "Southern Virginia",
+    "Question": "Which Confederate General was in charge to put down the Bragg Rebellion",
+    "Answers": [
+      "It did not exist",
+      "Stonewall Jackson",
+      "   Sidney Drake  "
+    ]
+  },
+  {
+    "TerritoryName": "Eastern Virginia",
+    "Question": "During the Petersbug campaign, Union soldiers tunneled to Confederate lines and used explosives. What was Union's goal behind \"The Crater\"?",
+    "Answers": [
+      "  Break stalemate ",
+      "  Destroy morale  ",
+      "Break Supply lines"
+    ]
+  },
+  {
+    "TerritoryName": "Washington D.C",
+    "Question": "Where was the St. Albans Raid?",
+    "Answers": [
+      "Vermont ",
+      "Maryland",
+      "  Maine "
+    ]
+  },
+  {
+    "TerritoryName": "West Virginia",
+    "Question": "Which of these states was NOT a border state?",
+    "Answers": [
+      "  Oklahoma   ",
+      "  Missouri   ",
+      "West Virginia"
+    ]
+  },
+  {
+    "TerritoryName": "Fredericksburg",
+    "Question": "What was the inital stated Union purpose of the Civil War?",
+    "Answers": [
+      "Preserve Union",
+      "Remove Slavery",
+      "State's rights"
+    ]
+  },
+  {
+    "TerritoryName": "The Wilderness",
+    "Question": "The Battle of the Wilderness marks the start of Grant's offensive towards Richmond. Who won?",
+    "Answers": [
+      "Inconclusive",
+      "   Union    ",
+      "Confederacy "
+    ]
+  },
+  {
+    "TerritoryName": "Eastern South Carolina",
+    "Question": "The confederate attack on Fort Sumter is regarded as the start of the Civil War. What was the result of the engagement?",
+    "Answers": [
+      "South won",
+      "North won",
+      " Neither "
+    ]
+  },
+  {
+    "TerritoryName": "Western Virginia",
+    "Question": "The surrender at Appomattox Court House marked the end of most southern resistance. Who was the Condeferate General that surrendered?",
+    "Answers": [
+      "  Robert E. Lee  ",
+      "Stonewall Jackson",
+      "  George Pickett "
+    ]
+  },
+  {
+    "TerritoryName": "Fredericksburg",
+    "Question": "Condeferate General Stonewall Jackson got his nickname at the first Battle of Bull Run. How did he die?",
+    "Answers": [
+      "Friendly fire",
+      "  Explosion  ",
+      " Union Charge "
+    ]
+  },
+  {
+    "TerritoryName": "Arkansas",
+    "Question": "The Anaconda plan was the main Union strategy formulated by Winfield Scott. Which one of these was one of the goals of the Anaconda Plan?",
+    "Answers": [
+      "Mississpi River",
+      "    Florida    ",
+      "     Texas     "
+    ]
+  },
+  {
+    "TerritoryName": "South Georgia",
+    "Question": "Sherman's March to the Sea was based on the idea that armies are supported by the people. It used total war tactics to disrupt the south. What was the final desination of this march?",
+    "Answers": [
+      "Savannah",
+      "Atlanta ",
+      " Miami  "
+    ]
+  },
+  {
+    "TerritoryName": "Savannah",
+    "Question": "Georgia took the full force of Sherman's March to the Sea. Who was the general who instigated it?",
+    "Answers": [
+      "William T Sherman ",
+      "Franklin Roosevelt",
+      "   Barack Obama   "
+    ]
+  },
+  {
+    "TerritoryName": "Central Georgia",
+    "Question": "General William T. Sherman accepted the surrender of:",
+    "Answers": [
+      "Joseph E. Johnston",
+      "  Robert E. Lee  ",
+      "Stonewall Jackson"
+    ]
+  },
+  {
+    "TerritoryName": "South Chesapeake Bay",
+    "Question": "What was the primary reason the south claims as the reason for seceding?",
+    "Answers": [
+      "  Slavery   ",
+      "States Rights",
+      "Trade Tariffs"
+    ]
+  }
+]

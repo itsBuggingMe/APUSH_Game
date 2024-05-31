@@ -283,7 +283,7 @@ namespace APUSH_Game.Helpers
         public static void DrawStringCentered(this SpriteBatch sb, string text, Vector2 location, float size = 1, Color? color = null, float? layer = null)
         {
             Vector2 measuredSize;
-            if (!cachedMeasures.TryGetValue(text, out measuredSize))
+            if(!cachedMeasures.TryGetValue(text, out measuredSize))
             {
                 measuredSize = Globals.Font.MeasureString(text);
                 cachedMeasures.Add(text, measuredSize);
